@@ -1,0 +1,15 @@
+Heart default_heart 0 3 20
+Heart dog_heart 0 2 15
+Heart bear_heart 0 5 30
+Eye default_eye 2 1 4
+Eye dog_eye 3 1 6
+Eye bear_eye 3 2 10
+Leg default_leg 10 10 10
+Leg dog_leg 5 5 6
+Leg bear_leg 15 15 15
+Horn default_horn 3 5 2
+Claw bear_claw 3 6 3
+Lung default_lung 3 3 4
+Lung dog_lung 2 2 3
+Lung bear_lung 4 4 10
+Strepsiptera strepsiptera 0 0 0
