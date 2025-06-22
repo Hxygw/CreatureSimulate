@@ -57,8 +57,12 @@ public class AnimalState_FindLove : AnimalState
         {
             while (satiety > 0)
             {
-                WorldManager.AnimalAppear(AnimalType.CreatNewAnimal(animal1.AnimalType, animal2.AnimalType), (animal1.transform.position + animal2.transform.position) / 2f, AnimalType.StrepsipteraLoveCoast);
-                satiety -= AnimalType.StrepsipteraLoveCoast;
+                var a = AnimalType.CreatNewAnimal(animal1.AnimalType, animal2.AnimalType);
+                if (a != null)
+                {
+                    WorldManager.AnimalAppear(a, (animal1.transform.position + animal2.transform.position) / 2f, AnimalType.StrepsipteraLoveCoast);
+                    satiety -= AnimalType.StrepsipteraLoveCoast;
+                }
             }
             if (animal1.AnimalType.strepsiptera) animal1.Dead();
             else animal1.AnimalStateMachine.SwitchState(typeof(AnimalState_Idle));

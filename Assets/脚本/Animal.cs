@@ -32,7 +32,7 @@ public class AnimalType
     public readonly int id;
     public readonly List<BodyPart> bodyParts = new();
     public readonly float speed, attack, range, power, breath, hungrySpeed, acceleration, size, loveSatietyCoast = 0.3f;
-    protected int blood, weight;
+    public readonly int blood, weight;
     public bool strepsiptera = false;
     /// <summary>
     /// 身体部件id列表，用于生物种类的查重
@@ -85,9 +85,9 @@ public class AnimalType
             throw new System.ArgumentException("血液不足以支撑");
         if (breath == 0)
             throw new System.ArgumentException("没有肺");
-        speed = Mathf.Max(power, 1) / Mathf.Pow(weight, 2f);
+        speed = Mathf.Max(power, 1) / weight;
         hungrySpeed = Mathf.Pow(weight, 1.5f) * (Mathf.Log(power + 2, 2) + 10);
-        acceleration = (blood + 1f) / Mathf.Pow(weight, 1.5f);
+        acceleration = Mathf.Max(power, 1) * Mathf.Pow(blood + 1f, 0.8f) / Mathf.Pow(weight, 0.8f);
         size = Mathf.Pow(weight, 0.8f);
         if (range == 0) range = 1;
         bodyPartIdList.Sort();

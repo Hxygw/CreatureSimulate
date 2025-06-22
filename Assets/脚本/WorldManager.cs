@@ -108,7 +108,8 @@ public class WorldManager : MonoBehaviour
     public static void AnimalAppear(AnimalType animalType, float x, float y, float satiety = 0.6f)
     {
         if (animalType == null) return;
-        while (animalPool_Off.Peek() == null) animalPool_Off.Dequeue();
+        while (animalPool_Off.Count != 0 && animalPool_Off.Peek() == null) animalPool_Off.Dequeue();
+        if (animalPool_Off.Count == 0) animalPool_Off.Enqueue(Instantiate(instance.AnimalObject, instance.transform));
         animalPool_Off.Peek().transform.position = new Vector3(x, y);
         animalPool_Off.Peek().GetComponent<AnimalMovement>().AnimalType = animalType;
         animalPool_Off.Peek().GetComponent<AnimalMovement>().satiety = satiety;

@@ -5,11 +5,11 @@ public class AnimalMovement : MonoBehaviour
     /// <summary>
     /// 奔跑速度修正乘数
     /// </summary>
-    const float RunSpeedFix = 450;
+    const float RunSpeedFix = 350;
     /// <summary>
     /// 正常速度修正乘数
     /// </summary>
-    const float IdleSpeedFix = 300;
+    const float IdleSpeedFix = 200;
     /// <summary>
     /// 奔跑加速度修正乘数
     /// </summary>
@@ -17,7 +17,7 @@ public class AnimalMovement : MonoBehaviour
     /// <summary>
     /// 正常加速度修正乘数
     /// </summary>
-    const float AccelerationFix = 80;
+    const float AccelerationFix = 130;
     /// <summary>
     /// 疲劳饥饿速度修正除数
     /// </summary>
@@ -100,6 +100,7 @@ public class AnimalMovement : MonoBehaviour
         breath = AnimalType.breath;
         tiredStartTime = Time.time;
         circle.localScale = new Vector3(AnimalType.size / SizeFix, AnimalType.size / SizeFix, 1);
+        AnimalRigidBody.mass = AnimalType.weight;
         AnimalStateMachine.SwitchState(typeof(AnimalState_Idle));
     }
 
@@ -158,7 +159,7 @@ public class AnimalMovement : MonoBehaviour
             breath -= Time.fixedDeltaTime;
         if (rest)
             run = false;
-        AnimalRigidBody.AddForce((run ? AccelerationFix : RunAccelerationFix) * AnimalType.acceleration * MinimumTimeAcceleration.AccelerationDirection(AnimalRigidBody.velocity, AnimalType.acceleration * (run ? AccelerationFix : RunAccelerationFix), x, y));
+        AnimalRigidBody.AddForce((run ? AccelerationFix : RunAccelerationFix) * AnimalType.acceleration * MinimumTimeAcceleration.AccelerationDirection(AnimalRigidBody.velocity, AnimalType.acceleration * (run ? AccelerationFix : RunAccelerationFix) / AnimalType.weight, x, y));
         if (AnimalRigidBody.velocity.magnitude > AnimalType.speed * (run ? IdleSpeedFix : RunSpeedFix))
             AnimalRigidBody.velocity = AnimalType.speed * (run ? IdleSpeedFix : RunSpeedFix) * AnimalRigidBody.velocity.normalized;
     }
