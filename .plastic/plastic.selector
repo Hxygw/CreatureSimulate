@@ -1,4 +1,0 @@
-repository "CreatureSimulate@tj_hxygw@cloud.cn"
-  path "/"
-    br "/main"
-    co "/main"
