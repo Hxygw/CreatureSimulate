@@ -13,12 +13,13 @@ public class WorldManager : MonoBehaviour
     readonly static Queue<GameObject> animalPool_Off = new();
     public static int FoodNumMax;
     public static int AnimalNumMax;
+    public static float TimeScale = 1f;
     public static int FoodCurrent => foodPool_On.Count;
     public static int AnimalCurrent => animalPool_On.Count;
     public static float WorldRange;
     private float foodTime;
     public static bool Full => AnimalCurrent == AnimalNumMax;
-    static WorldManager instance;
+    public static WorldManager instance;
    
     [Header("ÊÀ½ç°ë¾¶")]
     [SerializeField] private float worldRange;
@@ -77,6 +78,7 @@ public class WorldManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        foodTime += (1 - TimeScale) * Time.deltaTime;
         if (procudctFood && !Full && FoodCurrent < FoodNumMax && Time.time - foodTime >= foodApprenceGap)
         {
             foodTime = Time.time;

@@ -8,6 +8,30 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PixelRect:
+    serializedVersion: 2
+    x: 295.2
+    y: 144.8
+    width: 758.4
+    height: 572.8
+  m_ShowMode: 0
+  m_Title: "\u5305\u7BA1\u7406\u5668"
+  m_RootView: {fileID: 4}
+  m_MinSize: {x: 748, y: 271}
+  m_MaxSize: {x: 4000, y: 4021}
+  m_Maximized: 0
+--- !u!114 &2
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -19,12 +43,63 @@ MonoBehaviour:
     width: 1536
     height: 820.8
   m_ShowMode: 4
-  m_Title: "\u6E38\u620F"
-  m_RootView: {fileID: 2}
+  m_Title: "\u9879\u76EE"
+  m_RootView: {fileID: 5}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
---- !u!114 &2
+--- !u!114 &3
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: PackageManagerWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 758.4
+    height: 572.8
+  m_MinSize: {x: 748, y: 250}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 15}
+  m_Panes:
+  - {fileID: 15}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &4
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 3}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 758.4
+    height: 572.8
+  m_MinSize: {x: 748, y: 271}
+  m_MaxSize: {x: 4000, y: 4021}
+  vertical: 0
+  controlID: 322
+  draggingID: 0
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,9 +112,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 3}
-  - {fileID: 5}
-  - {fileID: 4}
+  - {fileID: 6}
+  - {fileID: 8}
+  - {fileID: 7}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -52,7 +127,7 @@ MonoBehaviour:
   m_TopViewHeight: 30
   m_UseBottomView: 1
   m_BottomViewHeight: 20
---- !u!114 &3
+--- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,7 +149,7 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &4
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,7 +170,7 @@ MonoBehaviour:
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &5
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,8 +183,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 6}
-  - {fileID: 11}
+  - {fileID: 9}
+  - {fileID: 14}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -119,9 +194,9 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 93
+  controlID: 99
   draggingID: 0
---- !u!114 &6
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,8 +209,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 7}
   - {fileID: 10}
+  - {fileID: 13}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -145,9 +220,9 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 46
+  controlID: 54
   draggingID: 0
---- !u!114 &7
+--- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,8 +235,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 8}
-  - {fileID: 9}
+  - {fileID: 11}
+  - {fileID: 12}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -171,9 +246,9 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 47
+  controlID: 43
   draggingID: 0
---- !u!114 &8
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,14 +267,14 @@ MonoBehaviour:
     y: 0
     width: 294.4
     height: 525.6
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 13}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 18}
   m_Panes:
-  - {fileID: 13}
+  - {fileID: 18}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &9
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -218,15 +293,15 @@ MonoBehaviour:
     y: 0
     width: 918.4
     height: 525.6
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 14}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 19}
   m_Panes:
-  - {fileID: 14}
-  - {fileID: 12}
+  - {fileID: 19}
+  - {fileID: 17}
   m_Selected: 0
   m_LastSelected: 1
---- !u!114 &10
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -236,7 +311,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -245,16 +320,15 @@ MonoBehaviour:
     y: 525.6
     width: 1212.8
     height: 245.20001
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 16}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 20}
   m_Panes:
-  - {fileID: 15}
-  - {fileID: 16}
-  - {fileID: 17}
-  m_Selected: 1
-  m_LastSelected: 0
---- !u!114 &11
+  - {fileID: 20}
+  - {fileID: 21}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -264,7 +338,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: Window
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -273,14 +347,2287 @@ MonoBehaviour:
     y: 0
     width: 323.19995
     height: 770.8
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 18}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 16}
   m_Panes:
-  - {fileID: 18}
-  m_Selected: 0
+  - {fileID: 22}
+  - {fileID: 16}
+  m_Selected: 1
   m_LastSelected: 0
---- !u!114 &12
+--- !u!114 &15
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13953, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 748, y: 250}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: "\u5305\u7BA1\u7406\u5668"
+    m_Image: {fileID: 5076950121296946556, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 295.2
+    y: 144.8
+    width: 758.4
+    height: 551.8
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+--- !u!114 &16
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ffb9ccd5681bd841ae77e9e5571f770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Git for Unity
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1212.8
+    y: 73.6
+    width: 322.19995
+    height: 749.8
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  progressMessageClearTime: -1
+  notificationClearTime: -1
+  timeSinceLastRotation: -1
+  currentBranchAndRemoteHasUpdate: 0
+  currentTrackingStatusHasUpdate: 0
+  currentStatusEntriesHasUpdate: 0
+  repositoryProgressHasUpdate: 0
+  appManagerProgressHasUpdate: 0
+  changeTab: 3
+  activeTab: 3
+  initProjectView:
+    hasCompletedInitialCheck: 0
+    isUserDataPresent: 0
+    lastCheckUserChangedEvent:
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      cacheType: 8
+  branchesView:
+    treeLocals:
+      IsRemote: 0
+      folders:
+        keys:
+        - Local branches
+        values:
+        - path: Local branches
+          label: Local branches
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+      checkedFileNodes:
+        keys: []
+        values: []
+      title: Local branches
+      pathSeparator: /
+      displayRootNode: 1
+      isSelectable: 1
+      isCheckable: 0
+      nodes:
+      - path: Local branches
+        label: Local branches
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: master
+        label: master
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 1
+        treeIsCheckable: 0
+        checkState: 0
+      selectedNode:
+        path: 
+        label: 
+        level: 0
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+    treeRemotes:
+      IsRemote: 1
+      folders:
+        keys:
+        - Remote branches
+        - origin
+        values:
+        - path: Remote branches
+          label: Remote branches
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+        - path: origin
+          label: origin
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 0
+          checkState: 0
+      checkedFileNodes:
+        keys: []
+        values: []
+      title: Remote branches
+      pathSeparator: /
+      displayRootNode: 1
+      isSelectable: 1
+      isCheckable: 0
+      nodes:
+      - path: Remote branches
+        label: Remote branches
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: origin
+        label: origin
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: origin/HEAD
+        label: HEAD
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: origin/master
+        label: master
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      selectedNode:
+        path: origin/HEAD
+        label: HEAD
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+    mode: 0
+    newBranchName: 
+    scroll: {x: 0, y: 0}
+    disableDelete: 1
+    disableCreate: 1
+    lastLocalAndRemoteBranchListChangedEvent:
+      updatedTimeString: 2025-06-27T23:26:06.041+08:00
+      cacheType: 2
+    lastCurrentBranchAndRemoteChange:
+      updatedTimeString: 2025-06-27T23:26:05.471+08:00
+      cacheType: 1
+    currentBranch:
+      name: master
+      tracking: origin/master
+    currentRemote:
+      name: origin
+      url: https://github.com/Hxygw/CreatureSimulate.git
+      login: 
+      user: 
+      host: 
+      function: 0
+      token: 
+    localBranches:
+    - name: master
+      tracking: origin/master
+    remoteBranches:
+    - name: origin/HEAD
+      tracking: '[None]'
+    - name: origin/master
+      tracking: '[None]'
+  changesView:
+    currentBranchHasUpdate: 0
+    currentStatusEntriesHasUpdate: 0
+    currentLocksHasUpdate: 0
+    commitBody: 
+    commitMessage: 
+    currentBranch: master
+    treeScroll: {x: 0, y: 0}
+    treeChanges:
+      assets:
+        keys:
+        - 00000000000000001000000000000000
+        - 419034b485a41f243a1e1ece8c5afc4e
+        - 3e8b71ee133e6ac49b256a515f0b1b8f
+        values:
+        - path: Assets
+          label: Assets
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C"
+          label: "\u811A\u672C"
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\CameraMovement.cs"
+          label: CameraMovement.cs
+          level: 2
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: "Assets\\\u811A\u672C\\CameraMovement.cs"
+            fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\CameraMovement.cs"
+            projectPath: "Assets\\\u811A\u672C\\CameraMovement.cs"
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+      folders:
+        keys:
+        - Assets
+        - "Assets\\\u811A\u672C"
+        - UserSettings
+        - UserSettings\Layouts
+        values:
+        - path: Assets
+          label: Assets
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C"
+          label: "\u811A\u672C"
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: UserSettings
+          label: UserSettings
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: UserSettings\Layouts
+          label: Layouts
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+      checkedFileNodes:
+        keys: []
+        values: []
+      title: 
+      pathSeparator: \
+      displayRootNode: 0
+      isSelectable: 1
+      isCheckable: 1
+      isUsingGlobalSelection: 1
+      nodes:
+      - path: 
+        label: 
+        level: -1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets
+        label: Assets
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C"
+        label: "\u811A\u672C"
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\CameraMovement.cs"
+        label: CameraMovement.cs
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: "Assets\\\u811A\u672C\\CameraMovement.cs"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\CameraMovement.cs"
+          projectPath: "Assets\\\u811A\u672C\\CameraMovement.cs"
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: "Assets\\\u811A\u672C\\CameraMovement.cs.meta"
+        label: CameraMovement.cs.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: "Assets\\\u811A\u672C\\CameraMovement.cs.meta"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\CameraMovement.cs.meta"
+          projectPath: "Assets\\\u811A\u672C\\CameraMovement.cs.meta"
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: UserSettings
+        label: UserSettings
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings\Layouts
+        label: Layouts
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        label: default-2022.dwlt
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\UserSettings\\Layouts\\default-2022.dwlt"
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      selectedNode:
+        path: 
+        label: 
+        level: 0
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+    gitStatusEntries:
+    - path: "Assets\\\u811A\u672C\\CameraMovement.cs"
+      fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\CameraMovement.cs"
+      projectPath: "Assets\\\u811A\u672C\\CameraMovement.cs"
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: "Assets\\\u811A\u672C\\CameraMovement.cs.meta"
+      fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\CameraMovement.cs.meta"
+      projectPath: "Assets\\\u811A\u672C\\CameraMovement.cs.meta"
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: UserSettings\Layouts\default-2022.dwlt
+      fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\UserSettings\\Layouts\\default-2022.dwlt"
+      projectPath: UserSettings\Layouts\default-2022.dwlt
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    changedFilesText: 3 changed files
+    lastCurrentBranchChangedEvent:
+      updatedTimeString: 2025-06-27T23:26:05.471+08:00
+      cacheType: 1
+    lastStatusEntriesChangedEvent:
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      cacheType: 6
+    lastLocksChangedEvent:
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      cacheType: 7
+  historyView:
+    currentLogHasUpdate: 0
+    currentTrackingStatusHasUpdate: 0
+    logEntries:
+    - commitID: a6b764aa926f525d835687617a744544f6738b08
+      mergeA: 
+      mergeB: 
+      authorName: Hxygw
+      authorEmail: ouqingtong@126.com
+      commitEmail: ouqingtong@126.com
+      commitName: Hxygw
+      summary: 0.021
+      description: 
+      timeString: 2025-06-22T16:06:33.000+08:00
+      commitTimeString: 2025-06-22T16:06:33.000+08:00
+      changes:
+      - path: .plastic\plastic.selector
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\.plastic\\plastic.selector"
+        projectPath: .plastic\plastic.selector
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: .plastic\plastic.wktree
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\.plastic\\plastic.wktree"
+        projectPath: .plastic\plastic.wktree
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: .plastic\plastic.workspace
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\.plastic\\plastic.workspace"
+        projectPath: .plastic\plastic.workspace
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+    - commitID: 106dd166736506fbc8444a337e042b82279de6ea
+      mergeA: c4de76282e3253f44f2744521d482581d3f28eee
+      mergeB: a38ed4487feb15d2d6bb2ca8dc2527778ce780f2
+      authorName: Hxygw
+      authorEmail: ouqingtong@126.com
+      commitEmail: ouqingtong@126.com
+      commitName: Hxygw
+      summary: Merge branch 'master' of https://github.com/Hxygw/CreatureSimulate
+      description: 
+      timeString: 2025-06-22T16:02:51.000+08:00
+      commitTimeString: 2025-06-22T16:02:51.000+08:00
+      changes: []
+    - commitID: c4de76282e3253f44f2744521d482581d3f28eee
+      mergeA: 
+      mergeB: 
+      authorName: Hxygw
+      authorEmail: ouqingtong@126.com
+      commitEmail: ouqingtong@126.com
+      commitName: Hxygw
+      summary: 0.02
+      description: zsbd
+      timeString: 2025-06-22T15:37:05.000+08:00
+      commitTimeString: 2025-06-22T15:37:05.000+08:00
+      changes:
+      - path: .plastic\plastic.wktree
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\.plastic\\plastic.wktree"
+        projectPath: .plastic\plastic.wktree
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: .plastic\plastic.workspace
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\.plastic\\plastic.workspace"
+        projectPath: .plastic\plastic.workspace
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.scene
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\Scenes\\SampleScene.scene"
+        projectPath: Assets\Scenes\SampleScene.scene
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\Animal.cs"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\Animal.cs"
+        projectPath: "Assets\\\u811A\u672C\\Animal.cs"
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\AnimalMovement.cs"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\AnimalMovement.cs"
+        projectPath: "Assets\\\u811A\u672C\\AnimalMovement.cs"
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\WorldManager.cs"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\WorldManager.cs"
+        projectPath: "Assets\\\u811A\u672C\\WorldManager.cs"
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.cs"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.cs"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.cs"
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: "Assets\\\u9884\u5236\u4EF6\\animal.prefab"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u9884\u5236\u4EF6\\animal.prefab"
+        projectPath: "Assets\\\u9884\u5236\u4EF6\\animal.prefab"
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\UserSettings\\Layouts\\CurrentMaximizeLayout.dwlt"
+        projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: a38ed4487feb15d2d6bb2ca8dc2527778ce780f2
+      mergeA: 
+      mergeB: 
+      authorName: Hxygw
+      authorEmail: 121671809+Hxygw@users.noreply.github.com
+      commitEmail: noreply@github.com
+      commitName: GitHub
+      summary: Create README.md
+      description: 
+      timeString: 2025-06-22T11:55:36.000+08:00
+      commitTimeString: 2025-06-22T11:55:36.000+08:00
+      changes:
+      - path: README.md
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\README.md"
+        projectPath: README.md
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: de415083818a188a41d12af6ca80950dea450b31
+      mergeA: 
+      mergeB: 
+      authorName: Hxygw
+      authorEmail: ouqingtong@126.com
+      commitEmail: ouqingtong@126.com
+      commitName: Hxygw
+      summary: 0.01
+      description: "\u57FA\u7840\u6846\u67B6\uFF0C\u7B80\u5355\u5185\u5BB9\uFF0C\u53EF\u80FD\u9700\u8981\u91CD\u6784"
+      timeString: 2025-06-22T11:23:42.000+08:00
+      commitTimeString: 2025-06-22T11:23:42.000+08:00
+      changes:
+      - path: .plastic\plastic.selector
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\.plastic\\plastic.selector"
+        projectPath: .plastic\plastic.selector
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: .plastic\plastic.wktree
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\.plastic\\plastic.wktree"
+        projectPath: .plastic\plastic.wktree
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: .plastic\plastic.workspace
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\.plastic\\plastic.workspace"
+        projectPath: .plastic\plastic.workspace
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: .vsconfig
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\.vsconfig"
+        projectPath: .vsconfig
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\AnimalDate.meta
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\AnimalDate.meta"
+        projectPath: Assets\AnimalDate.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\AnimalDate\AnimalTypes.txt
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\AnimalDate\\AnimalTypes.txt"
+        projectPath: Assets\AnimalDate\AnimalTypes.txt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\AnimalDate\AnimalTypes.txt.meta
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\AnimalDate\\AnimalTypes.txt.meta"
+        projectPath: Assets\AnimalDate\AnimalTypes.txt.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\AnimalDate\BodyParts.txt
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\AnimalDate\\BodyParts.txt"
+        projectPath: Assets\AnimalDate\BodyParts.txt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\AnimalDate\BodyParts.txt.meta
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\AnimalDate\\BodyParts.txt.meta"
+        projectPath: Assets\AnimalDate\BodyParts.txt.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes.meta
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\Scenes.meta"
+        projectPath: Assets\Scenes.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.scene
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\Scenes\\SampleScene.scene"
+        projectPath: Assets\Scenes\SampleScene.scene
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.scene.meta
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\Scenes\\SampleScene.scene.meta"
+        projectPath: Assets\Scenes\SampleScene.scene.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Sprite.meta
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\Sprite.meta"
+        projectPath: Assets\Sprite.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C.meta"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C.meta"
+        projectPath: "Assets\\\u811A\u672C.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\Animal.cs"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\Animal.cs"
+        projectPath: "Assets\\\u811A\u672C\\Animal.cs"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\Animal.cs.meta"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\Animal.cs.meta"
+        projectPath: "Assets\\\u811A\u672C\\Animal.cs.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\AnimalMovement.cs"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\AnimalMovement.cs"
+        projectPath: "Assets\\\u811A\u672C\\AnimalMovement.cs"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\AnimalMovement.cs.meta"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\AnimalMovement.cs.meta"
+        projectPath: "Assets\\\u811A\u672C\\AnimalMovement.cs.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\Food.cs"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\Food.cs"
+        projectPath: "Assets\\\u811A\u672C\\Food.cs"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\Food.cs.meta"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\Food.cs.meta"
+        projectPath: "Assets\\\u811A\u672C\\Food.cs.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\MinimumTimeAcceleration.cs"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\MinimumTimeAcceleration.cs"
+        projectPath: "Assets\\\u811A\u672C\\MinimumTimeAcceleration.cs"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\MinimumTimeAcceleration.cs.meta"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\MinimumTimeAcceleration.cs.meta"
+        projectPath: "Assets\\\u811A\u672C\\MinimumTimeAcceleration.cs.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\WorldManager.cs"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\WorldManager.cs"
+        projectPath: "Assets\\\u811A\u672C\\WorldManager.cs"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\WorldManager.cs.meta"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\WorldManager.cs.meta"
+        projectPath: "Assets\\\u811A\u672C\\WorldManager.cs.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A.meta"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A.meta"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A.meta"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A.meta"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState.cs"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState.cs"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState.cs"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState.cs.meta"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState.cs.meta"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState.cs.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalStateMachine.cs"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalStateMachine.cs"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalStateMachine.cs"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalStateMachine.cs.meta"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalStateMachine.cs.meta"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalStateMachine.cs.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Dead.asset"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Dead.asset"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Dead.asset"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Dead.asset.meta"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Dead.asset.meta"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Dead.asset.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Dead.cs"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Dead.cs"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Dead.cs"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Dead.cs.meta"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Dead.cs.meta"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Dead.cs.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Escape.asset"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Escape.asset"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Escape.asset"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Escape.asset.meta"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Escape.asset.meta"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Escape.asset.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Escape.cs"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Escape.cs"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Escape.cs"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Escape.cs.meta"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Escape.cs.meta"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Escape.cs.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindFood.asset"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindFood.asset"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindFood.asset"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindFood.asset.meta"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindFood.asset.meta"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindFood.asset.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindFood.cs"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindFood.cs"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindFood.cs"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindFood.cs.meta"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindFood.cs.meta"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindFood.cs.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.asset"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.asset"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.asset"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.asset.meta"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.asset.meta"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.asset.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.cs"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.cs"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.cs"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.cs.meta"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.cs.meta"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.cs.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Idle.asset"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Idle.asset"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Idle.asset"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Idle.asset.meta"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Idle.asset.meta"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Idle.asset.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Idle.cs"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Idle.cs"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Idle.cs"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Idle.cs.meta"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Idle.cs.meta"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Idle.cs.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\IState.cs"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\IState.cs"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\IState.cs"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\IState.cs.meta"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\IState.cs.meta"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\IState.cs.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\StateMachine.cs"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\StateMachine.cs"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\StateMachine.cs"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\StateMachine.cs.meta"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\StateMachine.cs.meta"
+        projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\StateMachine.cs.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u9884\u5236\u4EF6.meta"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u9884\u5236\u4EF6.meta"
+        projectPath: "Assets\\\u9884\u5236\u4EF6.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u9884\u5236\u4EF6\\animal.prefab"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u9884\u5236\u4EF6\\animal.prefab"
+        projectPath: "Assets\\\u9884\u5236\u4EF6\\animal.prefab"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u9884\u5236\u4EF6\\animal.prefab.meta"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u9884\u5236\u4EF6\\animal.prefab.meta"
+        projectPath: "Assets\\\u9884\u5236\u4EF6\\animal.prefab.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u9884\u5236\u4EF6\\food.prefab"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u9884\u5236\u4EF6\\food.prefab"
+        projectPath: "Assets\\\u9884\u5236\u4EF6\\food.prefab"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: "Assets\\\u9884\u5236\u4EF6\\food.prefab.meta"
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u9884\u5236\u4EF6\\food.prefab.meta"
+        projectPath: "Assets\\\u9884\u5236\u4EF6\\food.prefab.meta"
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Packages\manifest.json
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Packages\\manifest.json"
+        projectPath: Packages\manifest.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Packages\packages-lock.json
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Packages\\packages-lock.json"
+        projectPath: Packages\packages-lock.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\AudioManager.asset
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\AudioManager.asset"
+        projectPath: ProjectSettings\AudioManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\AutoStreamingSettings.asset
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\AutoStreamingSettings.asset"
+        projectPath: ProjectSettings\AutoStreamingSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\ClusterInputManager.asset
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\ClusterInputManager.asset"
+        projectPath: ProjectSettings\ClusterInputManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\DynamicsManager.asset
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\DynamicsManager.asset"
+        projectPath: ProjectSettings\DynamicsManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\EditorBuildSettings.asset
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\EditorBuildSettings.asset"
+        projectPath: ProjectSettings\EditorBuildSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\EditorSettings.asset
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\EditorSettings.asset"
+        projectPath: ProjectSettings\EditorSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\GraphicsSettings.asset
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\GraphicsSettings.asset"
+        projectPath: ProjectSettings\GraphicsSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\InputManager.asset
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\InputManager.asset"
+        projectPath: ProjectSettings\InputManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\MemorySettings.asset
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\MemorySettings.asset"
+        projectPath: ProjectSettings\MemorySettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\NavMeshAreas.asset
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\NavMeshAreas.asset"
+        projectPath: ProjectSettings\NavMeshAreas.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\NetworkManager.asset
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\NetworkManager.asset"
+        projectPath: ProjectSettings\NetworkManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\PackageManagerSettings.asset
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\PackageManagerSettings.asset"
+        projectPath: ProjectSettings\PackageManagerSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\Physics2DSettings.asset
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\Physics2DSettings.asset"
+        projectPath: ProjectSettings\Physics2DSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\PresetManager.asset
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\PresetManager.asset"
+        projectPath: ProjectSettings\PresetManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\ProjectSettings.asset
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\ProjectSettings.asset"
+        projectPath: ProjectSettings\ProjectSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\ProjectVersion.txt
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\ProjectVersion.txt"
+        projectPath: ProjectSettings\ProjectVersion.txt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\QualitySettings.asset
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\QualitySettings.asset"
+        projectPath: ProjectSettings\QualitySettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\SceneTemplateSettings.json
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\SceneTemplateSettings.json"
+        projectPath: ProjectSettings\SceneTemplateSettings.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\TagManager.asset
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\TagManager.asset"
+        projectPath: ProjectSettings\TagManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\TextureManagerSettings.asset
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\TextureManagerSettings.asset"
+        projectPath: ProjectSettings\TextureManagerSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\ThreadInfoSettings.asset
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\ThreadInfoSettings.asset"
+        projectPath: ProjectSettings\ThreadInfoSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\TimeManager.asset
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\TimeManager.asset"
+        projectPath: ProjectSettings\TimeManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\UnityConnectSettings.asset
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\UnityConnectSettings.asset"
+        projectPath: ProjectSettings\UnityConnectSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\VFXManager.asset
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\VFXManager.asset"
+        projectPath: ProjectSettings\VFXManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\VersionControlSettings.asset
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\VersionControlSettings.asset"
+        projectPath: ProjectSettings\VersionControlSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\XRSettings.asset
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\XRSettings.asset"
+        projectPath: ProjectSettings\XRSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\EditorUserSettings.asset
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\UserSettings\\EditorUserSettings.asset"
+        projectPath: UserSettings\EditorUserSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\UserSettings\\Layouts\\CurrentMaximizeLayout.dwlt"
+        projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2022.dwlt
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\UserSettings\\Layouts\\default-2022.dwlt"
+        projectPath: UserSettings\Layouts\default-2022.dwlt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Search.index
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\UserSettings\\Search.index"
+        projectPath: UserSettings\Search.index
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Search.settings
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\UserSettings\\Search.settings"
+        projectPath: UserSettings\Search.settings
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ignore.conf
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ignore.conf"
+        projectPath: ignore.conf
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: d3a77d518f867aa989211be43747a608a7359709
+      mergeA: 
+      mergeB: 
+      authorName: Hxygw
+      authorEmail: ouqingtong@126.com
+      commitEmail: ouqingtong@126.com
+      commitName: Hxygw
+      summary: Initial commit
+      description: 
+      timeString: 2025-06-22T11:19:56.000+08:00
+      commitTimeString: 2025-06-22T11:19:56.000+08:00
+      changes:
+      - path: .gitattributes
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\.gitattributes"
+        projectPath: .gitattributes
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: .gitignore
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\.gitignore"
+        projectPath: .gitignore
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\.gitignore
+        fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\.gitignore"
+        projectPath: Assets\.gitignore
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    statusAhead: 0
+    lastLogChangedEvent:
+      updatedTimeString: 2025-06-27T23:26:24.730+08:00
+      cacheType: 3
+    lastTrackingStatusChangedEvent:
+      updatedTimeString: 2025-06-27T23:26:10.256+08:00
+      cacheType: 5
+    historyControl:
+      scroll: {x: 0, y: 0}
+      entries:
+      - commitID: a6b764aa926f525d835687617a744544f6738b08
+        mergeA: 
+        mergeB: 
+        authorName: Hxygw
+        authorEmail: ouqingtong@126.com
+        commitEmail: ouqingtong@126.com
+        commitName: Hxygw
+        summary: 0.021
+        description: 
+        timeString: 2025-06-22T16:06:33.000+08:00
+        commitTimeString: 2025-06-22T16:06:33.000+08:00
+        changes:
+        - path: .plastic\plastic.selector
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\.plastic\\plastic.selector"
+          projectPath: .plastic\plastic.selector
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: .plastic\plastic.wktree
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\.plastic\\plastic.wktree"
+          projectPath: .plastic\plastic.wktree
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: .plastic\plastic.workspace
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\.plastic\\plastic.workspace"
+          projectPath: .plastic\plastic.workspace
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+      - commitID: 106dd166736506fbc8444a337e042b82279de6ea
+        mergeA: c4de76282e3253f44f2744521d482581d3f28eee
+        mergeB: a38ed4487feb15d2d6bb2ca8dc2527778ce780f2
+        authorName: Hxygw
+        authorEmail: ouqingtong@126.com
+        commitEmail: ouqingtong@126.com
+        commitName: Hxygw
+        summary: Merge branch 'master' of https://github.com/Hxygw/CreatureSimulate
+        description: 
+        timeString: 2025-06-22T16:02:51.000+08:00
+        commitTimeString: 2025-06-22T16:02:51.000+08:00
+        changes: []
+      - commitID: c4de76282e3253f44f2744521d482581d3f28eee
+        mergeA: 
+        mergeB: 
+        authorName: Hxygw
+        authorEmail: ouqingtong@126.com
+        commitEmail: ouqingtong@126.com
+        commitName: Hxygw
+        summary: 0.02
+        description: zsbd
+        timeString: 2025-06-22T15:37:05.000+08:00
+        commitTimeString: 2025-06-22T15:37:05.000+08:00
+        changes:
+        - path: .plastic\plastic.wktree
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\.plastic\\plastic.wktree"
+          projectPath: .plastic\plastic.wktree
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: .plastic\plastic.workspace
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\.plastic\\plastic.workspace"
+          projectPath: .plastic\plastic.workspace
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.scene
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\Scenes\\SampleScene.scene"
+          projectPath: Assets\Scenes\SampleScene.scene
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\Animal.cs"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\Animal.cs"
+          projectPath: "Assets\\\u811A\u672C\\Animal.cs"
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\AnimalMovement.cs"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\AnimalMovement.cs"
+          projectPath: "Assets\\\u811A\u672C\\AnimalMovement.cs"
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\WorldManager.cs"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\WorldManager.cs"
+          projectPath: "Assets\\\u811A\u672C\\WorldManager.cs"
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.cs"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.cs"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.cs"
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: "Assets\\\u9884\u5236\u4EF6\\animal.prefab"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u9884\u5236\u4EF6\\animal.prefab"
+          projectPath: "Assets\\\u9884\u5236\u4EF6\\animal.prefab"
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\UserSettings\\Layouts\\CurrentMaximizeLayout.dwlt"
+          projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: a38ed4487feb15d2d6bb2ca8dc2527778ce780f2
+        mergeA: 
+        mergeB: 
+        authorName: Hxygw
+        authorEmail: 121671809+Hxygw@users.noreply.github.com
+        commitEmail: noreply@github.com
+        commitName: GitHub
+        summary: Create README.md
+        description: 
+        timeString: 2025-06-22T11:55:36.000+08:00
+        commitTimeString: 2025-06-22T11:55:36.000+08:00
+        changes:
+        - path: README.md
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\README.md"
+          projectPath: README.md
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: de415083818a188a41d12af6ca80950dea450b31
+        mergeA: 
+        mergeB: 
+        authorName: Hxygw
+        authorEmail: ouqingtong@126.com
+        commitEmail: ouqingtong@126.com
+        commitName: Hxygw
+        summary: 0.01
+        description: "\u57FA\u7840\u6846\u67B6\uFF0C\u7B80\u5355\u5185\u5BB9\uFF0C\u53EF\u80FD\u9700\u8981\u91CD\u6784"
+        timeString: 2025-06-22T11:23:42.000+08:00
+        commitTimeString: 2025-06-22T11:23:42.000+08:00
+        changes:
+        - path: .plastic\plastic.selector
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\.plastic\\plastic.selector"
+          projectPath: .plastic\plastic.selector
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: .plastic\plastic.wktree
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\.plastic\\plastic.wktree"
+          projectPath: .plastic\plastic.wktree
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: .plastic\plastic.workspace
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\.plastic\\plastic.workspace"
+          projectPath: .plastic\plastic.workspace
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: .vsconfig
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\.vsconfig"
+          projectPath: .vsconfig
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\AnimalDate.meta
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\AnimalDate.meta"
+          projectPath: Assets\AnimalDate.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\AnimalDate\AnimalTypes.txt
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\AnimalDate\\AnimalTypes.txt"
+          projectPath: Assets\AnimalDate\AnimalTypes.txt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\AnimalDate\AnimalTypes.txt.meta
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\AnimalDate\\AnimalTypes.txt.meta"
+          projectPath: Assets\AnimalDate\AnimalTypes.txt.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\AnimalDate\BodyParts.txt
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\AnimalDate\\BodyParts.txt"
+          projectPath: Assets\AnimalDate\BodyParts.txt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\AnimalDate\BodyParts.txt.meta
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\AnimalDate\\BodyParts.txt.meta"
+          projectPath: Assets\AnimalDate\BodyParts.txt.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes.meta
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\Scenes.meta"
+          projectPath: Assets\Scenes.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.scene
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\Scenes\\SampleScene.scene"
+          projectPath: Assets\Scenes\SampleScene.scene
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.scene.meta
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\Scenes\\SampleScene.scene.meta"
+          projectPath: Assets\Scenes\SampleScene.scene.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Sprite.meta
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\Sprite.meta"
+          projectPath: Assets\Sprite.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C.meta"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C.meta"
+          projectPath: "Assets\\\u811A\u672C.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\Animal.cs"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\Animal.cs"
+          projectPath: "Assets\\\u811A\u672C\\Animal.cs"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\Animal.cs.meta"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\Animal.cs.meta"
+          projectPath: "Assets\\\u811A\u672C\\Animal.cs.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\AnimalMovement.cs"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\AnimalMovement.cs"
+          projectPath: "Assets\\\u811A\u672C\\AnimalMovement.cs"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\AnimalMovement.cs.meta"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\AnimalMovement.cs.meta"
+          projectPath: "Assets\\\u811A\u672C\\AnimalMovement.cs.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\Food.cs"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\Food.cs"
+          projectPath: "Assets\\\u811A\u672C\\Food.cs"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\Food.cs.meta"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\Food.cs.meta"
+          projectPath: "Assets\\\u811A\u672C\\Food.cs.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\MinimumTimeAcceleration.cs"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\MinimumTimeAcceleration.cs"
+          projectPath: "Assets\\\u811A\u672C\\MinimumTimeAcceleration.cs"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\MinimumTimeAcceleration.cs.meta"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\MinimumTimeAcceleration.cs.meta"
+          projectPath: "Assets\\\u811A\u672C\\MinimumTimeAcceleration.cs.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\WorldManager.cs"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\WorldManager.cs"
+          projectPath: "Assets\\\u811A\u672C\\WorldManager.cs"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\WorldManager.cs.meta"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\WorldManager.cs.meta"
+          projectPath: "Assets\\\u811A\u672C\\WorldManager.cs.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A.meta"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A.meta"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A.meta"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A.meta"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState.cs"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState.cs"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState.cs"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState.cs.meta"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState.cs.meta"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState.cs.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalStateMachine.cs"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalStateMachine.cs"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalStateMachine.cs"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalStateMachine.cs.meta"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalStateMachine.cs.meta"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalStateMachine.cs.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Dead.asset"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Dead.asset"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Dead.asset"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Dead.asset.meta"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Dead.asset.meta"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Dead.asset.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Dead.cs"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Dead.cs"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Dead.cs"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Dead.cs.meta"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Dead.cs.meta"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Dead.cs.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Escape.asset"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Escape.asset"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Escape.asset"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Escape.asset.meta"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Escape.asset.meta"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Escape.asset.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Escape.cs"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Escape.cs"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Escape.cs"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Escape.cs.meta"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Escape.cs.meta"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Escape.cs.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindFood.asset"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindFood.asset"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindFood.asset"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindFood.asset.meta"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindFood.asset.meta"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindFood.asset.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindFood.cs"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindFood.cs"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindFood.cs"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindFood.cs.meta"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindFood.cs.meta"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindFood.cs.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.asset"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.asset"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.asset"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.asset.meta"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.asset.meta"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.asset.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.cs"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.cs"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.cs"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.cs.meta"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.cs.meta"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_FindLove.cs.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Idle.asset"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Idle.asset"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Idle.asset"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Idle.asset.meta"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Idle.asset.meta"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Idle.asset.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Idle.cs"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Idle.cs"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Idle.cs"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Idle.cs.meta"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Idle.cs.meta"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\Animal\u72B6\u6001\u673A\\AnimalState_Idle.cs.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\IState.cs"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\IState.cs"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\IState.cs"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\IState.cs.meta"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\IState.cs.meta"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\IState.cs.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\StateMachine.cs"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\StateMachine.cs"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\StateMachine.cs"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\StateMachine.cs.meta"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\StateMachine.cs.meta"
+          projectPath: "Assets\\\u811A\u672C\\\u72B6\u6001\u673A\\StateMachine.cs.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u9884\u5236\u4EF6.meta"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u9884\u5236\u4EF6.meta"
+          projectPath: "Assets\\\u9884\u5236\u4EF6.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u9884\u5236\u4EF6\\animal.prefab"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u9884\u5236\u4EF6\\animal.prefab"
+          projectPath: "Assets\\\u9884\u5236\u4EF6\\animal.prefab"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u9884\u5236\u4EF6\\animal.prefab.meta"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u9884\u5236\u4EF6\\animal.prefab.meta"
+          projectPath: "Assets\\\u9884\u5236\u4EF6\\animal.prefab.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u9884\u5236\u4EF6\\food.prefab"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u9884\u5236\u4EF6\\food.prefab"
+          projectPath: "Assets\\\u9884\u5236\u4EF6\\food.prefab"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: "Assets\\\u9884\u5236\u4EF6\\food.prefab.meta"
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\\u9884\u5236\u4EF6\\food.prefab.meta"
+          projectPath: "Assets\\\u9884\u5236\u4EF6\\food.prefab.meta"
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Packages\manifest.json
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Packages\\manifest.json"
+          projectPath: Packages\manifest.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Packages\packages-lock.json
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Packages\\packages-lock.json"
+          projectPath: Packages\packages-lock.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\AudioManager.asset
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\AudioManager.asset"
+          projectPath: ProjectSettings\AudioManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\AutoStreamingSettings.asset
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\AutoStreamingSettings.asset"
+          projectPath: ProjectSettings\AutoStreamingSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\ClusterInputManager.asset
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\ClusterInputManager.asset"
+          projectPath: ProjectSettings\ClusterInputManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\DynamicsManager.asset
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\DynamicsManager.asset"
+          projectPath: ProjectSettings\DynamicsManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\EditorBuildSettings.asset
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\EditorBuildSettings.asset"
+          projectPath: ProjectSettings\EditorBuildSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\EditorSettings.asset
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\EditorSettings.asset"
+          projectPath: ProjectSettings\EditorSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\GraphicsSettings.asset
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\GraphicsSettings.asset"
+          projectPath: ProjectSettings\GraphicsSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\InputManager.asset
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\InputManager.asset"
+          projectPath: ProjectSettings\InputManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\MemorySettings.asset
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\MemorySettings.asset"
+          projectPath: ProjectSettings\MemorySettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\NavMeshAreas.asset
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\NavMeshAreas.asset"
+          projectPath: ProjectSettings\NavMeshAreas.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\NetworkManager.asset
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\NetworkManager.asset"
+          projectPath: ProjectSettings\NetworkManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\PackageManagerSettings.asset
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\PackageManagerSettings.asset"
+          projectPath: ProjectSettings\PackageManagerSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\Physics2DSettings.asset
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\Physics2DSettings.asset"
+          projectPath: ProjectSettings\Physics2DSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\PresetManager.asset
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\PresetManager.asset"
+          projectPath: ProjectSettings\PresetManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\ProjectSettings.asset
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\ProjectSettings.asset"
+          projectPath: ProjectSettings\ProjectSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\ProjectVersion.txt
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\ProjectVersion.txt"
+          projectPath: ProjectSettings\ProjectVersion.txt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\QualitySettings.asset
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\QualitySettings.asset"
+          projectPath: ProjectSettings\QualitySettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\SceneTemplateSettings.json
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\SceneTemplateSettings.json"
+          projectPath: ProjectSettings\SceneTemplateSettings.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\TagManager.asset
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\TagManager.asset"
+          projectPath: ProjectSettings\TagManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\TextureManagerSettings.asset
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\TextureManagerSettings.asset"
+          projectPath: ProjectSettings\TextureManagerSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\ThreadInfoSettings.asset
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\ThreadInfoSettings.asset"
+          projectPath: ProjectSettings\ThreadInfoSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\TimeManager.asset
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\TimeManager.asset"
+          projectPath: ProjectSettings\TimeManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\UnityConnectSettings.asset
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\UnityConnectSettings.asset"
+          projectPath: ProjectSettings\UnityConnectSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\VFXManager.asset
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\VFXManager.asset"
+          projectPath: ProjectSettings\VFXManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\VersionControlSettings.asset
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\VersionControlSettings.asset"
+          projectPath: ProjectSettings\VersionControlSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\XRSettings.asset
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ProjectSettings\\XRSettings.asset"
+          projectPath: ProjectSettings\XRSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\EditorUserSettings.asset
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\UserSettings\\EditorUserSettings.asset"
+          projectPath: UserSettings\EditorUserSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\UserSettings\\Layouts\\CurrentMaximizeLayout.dwlt"
+          projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2022.dwlt
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\UserSettings\\Layouts\\default-2022.dwlt"
+          projectPath: UserSettings\Layouts\default-2022.dwlt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Search.index
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\UserSettings\\Search.index"
+          projectPath: UserSettings\Search.index
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Search.settings
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\UserSettings\\Search.settings"
+          projectPath: UserSettings\Search.settings
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ignore.conf
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\ignore.conf"
+          projectPath: ignore.conf
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: d3a77d518f867aa989211be43747a608a7359709
+        mergeA: 
+        mergeB: 
+        authorName: Hxygw
+        authorEmail: ouqingtong@126.com
+        commitEmail: ouqingtong@126.com
+        commitName: Hxygw
+        summary: Initial commit
+        description: 
+        timeString: 2025-06-22T11:19:56.000+08:00
+        commitTimeString: 2025-06-22T11:19:56.000+08:00
+        changes:
+        - path: .gitattributes
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\.gitattributes"
+          projectPath: .gitattributes
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: .gitignore
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\.gitignore"
+          projectPath: .gitignore
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\.gitignore
+          fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\Assets\\.gitignore"
+          projectPath: Assets\.gitignore
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      statusAhead: 0
+      selectedIndex: 1
+    selectedEntry:
+      commitID: 106dd166736506fbc8444a337e042b82279de6ea
+      mergeA: c4de76282e3253f44f2744521d482581d3f28eee
+      mergeB: a38ed4487feb15d2d6bb2ca8dc2527778ce780f2
+      authorName: Hxygw
+      authorEmail: ouqingtong@126.com
+      commitEmail: ouqingtong@126.com
+      commitName: Hxygw
+      summary: Merge branch 'master' of https://github.com/Hxygw/CreatureSimulate
+      description: 
+      timeString: 2025-06-22T16:02:51.000+08:00
+      commitTimeString: 2025-06-22T16:02:51.000+08:00
+      changes: []
+    treeChanges:
+      assets:
+        keys: []
+        values: []
+      folders:
+        keys: []
+        values: []
+      checkedFileNodes:
+        keys: []
+        values: []
+      title: 
+      pathSeparator: \
+      displayRootNode: 0
+      isSelectable: 1
+      isCheckable: 0
+      isUsingGlobalSelection: 0
+      nodes:
+      - path: 
+        label: 
+        level: -1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      selectedNode:
+        path: 
+        label: 
+        level: 0
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+    detailsScroll: {x: 0, y: 0}
+  settingsView:
+    gitPathView:
+      gitPath: C:\Users\ouqin\AppData\Local\GitHubDesktop\app-3.5.0\resources\app\git\mingw64\bin\git.exe
+      gitLfsPath: C:\Users\ouqin\AppData\Local\GitHubDesktop\app-3.5.0\resources\app\git\mingw64\libexec\git-core\git-lfs.exe
+      errorMessage: 
+      resetToBundled: 0
+      resetToSystem: 0
+      changingManually: 0
+      installSettingsHidden: 0
+    hasRemote: 1
+    lastCurrentRemoteChangedEvent:
+      updatedTimeString: 2025-06-22T15:26:19.857+08:00
+      cacheType: 1
+    newRepositoryRemoteUrl: https://github.com/Hxygw/CreatureSimulate.git
+    repositoryRemoteName: origin
+    repositoryRemoteUrl: https://github.com/Hxygw/CreatureSimulate.git
+    scroll: {x: 0, y: 0}
+    userSettingsView:
+      gitName: Hxygw
+      gitEmail: ouqingtong@126.com
+      newGitName: Hxygw
+      newGitEmail: ouqingtong@126.com
+      needsSaving: 0
+      lastCheckUserChangedEvent:
+        updatedTimeString: 0001-01-01T00:00:00.000+00:00
+        cacheType: 8
+      configSettingsHidden: 0
+    repositorySettingsHidden: 0
+    generalSettingsHidden: 0
+    debugSettingsHidden: 0
+    uiSceneSettingsHidden: 0
+    uiProjectSettingsHidden: 0
+  locksView:
+    currentRemoteHasUpdate: 1
+    currentStatusEntriesHasUpdate: 0
+    currentLocksHasUpdate: 0
+    keychainHasUpdate: 1
+    locksControl:
+      scroll: {x: 0, y: 0}
+      gitLockEntries: []
+      assets:
+        keys: []
+        values: []
+      gitStatusDictionary:
+        keys: []
+        values: []
+      selectedEntry:
+        gitLock:
+          id: 
+          path: 
+          owner:
+            name: 
+            email: 
+          lockedAtString: 
+        gitFileStatus: 0
+        lockedAt: "1 1\u6708 0001, 08:00"
+    lastCurrentRemoteChangedEvent:
+      updatedTimeString: 2025-06-27T23:26:05.471+08:00
+      cacheType: 1
+    lastLocksChangedEvent:
+      updatedTimeString: 2025-06-27T23:26:09.987+08:00
+      cacheType: 7
+    lastStatusEntriesChangedEvent:
+      updatedTimeString: 2025-06-27T23:26:10.249+08:00
+      cacheType: 6
+    lockedFiles: []
+    gitStatusEntries:
+    - path: UserSettings\Layouts\default-2022.dwlt
+      fullPath: "D:\\Unity\u6587\u4EF6\u5939\\CreatureSimulate\\UserSettings\\Layouts\\default-2022.dwlt"
+      projectPath: UserSettings\Layouts\default-2022.dwlt
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    currentUsername: 
+    unlockFileMenuContent:
+      m_Text: Release Lock
+      m_Image: {fileID: 0}
+      m_Tooltip: 
+    forceUnlockFileMenuContent:
+      m_Text: Release Lock (forced)
+      m_Image: {fileID: 0}
+      m_Tooltip: 
+  hasRemote: 1
+  currentRemoteName: origin
+  currentBranch: master
+  currentRemoteUrl: https://github.com/Hxygw/CreatureSimulate.git
+  statusAhead: 0
+  statusBehind: 0
+  hasItemsToCommit: 1
+  isTrackingRemoteBranch: 1
+  currentBranchContent:
+    m_Text: master
+    m_Image: {fileID: 0}
+    m_Tooltip: Active branch
+  currentRemoteUrlContent:
+    m_Text: https://github.com/Hxygw/CreatureSimulate.git
+    m_Image: {fileID: 0}
+    m_Tooltip: Url of the origin remote
+  lastCurrentBranchAndRemoteChangedEvent:
+    updatedTimeString: 2025-06-27T23:26:05.471+08:00
+    cacheType: 1
+  lastTrackingStatusChangedEvent:
+    updatedTimeString: 2025-06-27T23:30:42.391+08:00
+    cacheType: 5
+  lastStatusEntriesChangedEvent:
+    updatedTimeString: 2025-06-27T23:32:25.279+08:00
+    cacheType: 6
+  pullButtonContent:
+    m_Text: Pull
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  pushButtonContent:
+    m_Text: Push
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  refreshButtonContent:
+    m_Text: Refresh
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  fetchButtonContent:
+    m_Text: Fetch
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  repositoryProgressValue: 0
+  repositoryProgressMessage: 
+  appManagerProgressValue: 1
+  appManagerProgressMessage: 
+  primaryConnectionUsername: 
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -379,7 +2726,7 @@ MonoBehaviour:
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
   m_showToolbar: 1
---- !u!114 &13
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -416,9 +2763,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 7a07feff
-      m_LastClickedID: -129158
-      m_ExpandedIDs: 7a07feff2c93feffe494feffbe7cffffe6faffff42640000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: e6faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -434,7 +2781,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 8}
+        m_ClientGUIView: {fileID: 11}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -442,7 +2789,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &14
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -811,9 +3158,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 9.184339, y: 4.3246865, z: 9.7032585}
+    m_Target: {x: -10.052954, y: 7.0460443, z: 9.5038805}
     speed: 2
-    m_Value: {x: 8.877787, y: 3.4461544, z: 9.714437}
+    m_Value: {x: -10.052954, y: 7.0460443, z: 9.5038805}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -863,9 +3210,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 25.957624
+    m_Target: 45.895706
     speed: 2
-    m_Value: 24.839832
+    m_Value: 45.895706
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -892,7 +3239,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &15
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -913,9 +3260,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 565.60004
-    width: 1174.2
-    height: 257.8
+    y: 599.2
+    width: 1211.8
+    height: 224.20001
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -951,10 +3298,10 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 19}
-    m_SelectedIDs: d2640000
-    m_LastClickedID: 25810
-    m_ExpandedIDs: 00000000be640000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: d0660000
+    m_LastClickedID: 26320
+    m_ExpandedIDs: 00000000b466000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -982,7 +3329,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000be640000
+    m_ExpandedIDs: 00000000b4660000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1007,9 +3354,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 32640000
-    m_LastClickedInstanceID: 25650
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1026,7 +3373,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 13}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -1038,7 +3385,7 @@ MonoBehaviour:
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
---- !u!114 &16
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1072,42 +3419,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
---- !u!114 &17
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6629f1bb292b749a18b5fff7994c8b19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 600, y: 350}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Unity Version Control
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 548.8
-    width: 1167
-    height: 274.59998
-  m_SerializedDataModeController:
-    m_DataMode: 0
-    m_PreferredDataMode: 0
-    m_SupportedDataModes: 
-    isAutomatic: 1
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_OverlaysVisible: 1
-  mForceToReOpen: 0
---- !u!114 &18
+--- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}

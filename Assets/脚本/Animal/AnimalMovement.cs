@@ -39,6 +39,7 @@ public class AnimalMovement : MonoBehaviour
     public TrailRenderer trailRenderer;
     public Transform circle;
     public float breath;
+    Vector3 velocity;
     bool rest = false;
     /// <summary>
     /// 散步目的地
@@ -131,14 +132,14 @@ public class AnimalMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (rest) breath += Time.fixedDeltaTime;
+        if (rest) breath += Time.fixedDeltaTime * WorldManager.TimeScale;
         if (breath <= 0) rest = true;
         if (breath > AnimalType.breath)
         {
             breath = AnimalType.breath;
             rest = false;
         }
-        satiety -= AnimalType.hungrySpeed / (breath < AnimalType.breath ? RunHungrySpeedFix : HungrySpeedFix);
+        satiety -= AnimalType.hungrySpeed / (breath < AnimalType.breath ? RunHungrySpeedFix : HungrySpeedFix) * WorldManager.TimeScale;
         if (satiety < 0)
             Dead();
     }
@@ -152,16 +153,25 @@ public class AnimalMovement : MonoBehaviour
 
     public void ApproachPosition(Vector2 position, bool run)
     {
+        if (WorldManager.TimeScale == 0)
+        {
+            AnimalRigidBody.velocity = Vector3.zero;
+            return;
+        }
+
         float x = position.x - transform.position.x;
         float y = position.y - transform.position.y;
         if (!run && breath < AnimalType.breath) rest = true;
         if (run && !rest)
-            breath -= Time.fixedDeltaTime;
+            breath -= Time.fixedDeltaTime * WorldManager.TimeScale;
         if (rest)
             run = false;
-        AnimalRigidBody.AddForce((run ? AccelerationFix : RunAccelerationFix) * AnimalType.acceleration * MinimumTimeAcceleration.AccelerationDirection(AnimalRigidBody.velocity, AnimalType.acceleration * (run ? AccelerationFix : RunAccelerationFix) / AnimalType.weight, x, y));
-        if (AnimalRigidBody.velocity.magnitude > AnimalType.speed * (run ? IdleSpeedFix : RunSpeedFix))
-            AnimalRigidBody.velocity = AnimalType.speed * (run ? IdleSpeedFix : RunSpeedFix) * AnimalRigidBody.velocity.normalized;
+        AnimalRigidBody.AddForce(WorldManager.TimeScale * (run ? AccelerationFix : RunAccelerationFix) * AnimalType.acceleration * MinimumTimeAcceleration.AccelerationDirection(AnimalRigidBody.velocity, WorldManager.TimeScale * AnimalType.acceleration * (run ? AccelerationFix : RunAccelerationFix) / AnimalType.weight, x, y));
+        if (AnimalRigidBody.velocity.magnitude == 0)
+            AnimalRigidBody.velocity = velocity * WorldManager.TimeScale;
+        if (AnimalRigidBody.velocity.magnitude > AnimalType.speed * (run ? IdleSpeedFix : RunSpeedFix) * WorldManager.TimeScale)
+            AnimalRigidBody.velocity = WorldManager.TimeScale * AnimalType.speed * (run ? IdleSpeedFix : RunSpeedFix) * AnimalRigidBody.velocity.normalized;
+        velocity = AnimalRigidBody.velocity / WorldManager.TimeScale;
     }
 
 
