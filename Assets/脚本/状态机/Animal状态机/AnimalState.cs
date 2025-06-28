@@ -62,6 +62,27 @@ public class AnimalState : ScriptableObject, Istate
     //=====================================================================================================================
     //º¯Êý
 
+    protected bool CheckEscape()
+    {
+        foreach (var animal in AnimalMovement.animalsInHorizon)
+            if (CanInteract(animal) && animal.Hunting && animal.AnimalType.attack > AnimalMovement.AnimalType.attack)
+            {
+                StateMachine.SwitchState(typeof(AnimalState_Escape));
+                return true;
+            }
+        return false;
+    }
+
+    protected bool CanInteract(AnimalMovement animal)
+    {
+        return animal != null && animal.isActiveAndEnabled && animal.AnimalType != null;
+    }
+    protected bool CanInteract(Food food)
+    {
+        return food != null && food.isActiveAndEnabled;
+    }
+
+
 
     //=====================================================================================================================
     //Ð­³Ì

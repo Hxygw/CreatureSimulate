@@ -3,21 +3,29 @@ using System.Collections.Generic;
 public class AnimalMovement : MonoBehaviour
 {
     /// <summary>
+    /// 冲刺速度修正乘数
+    /// </summary>
+    const float RushSpeedFix = 200;
+    /// <summary>
     /// 奔跑速度修正乘数
     /// </summary>
-    const float RunSpeedFix = 200;
+    const float RunSpeedFix = 50;
     /// <summary>
     /// 正常速度修正乘数
     /// </summary>
-    const float IdleSpeedFix = 50;
+    const float IdleSpeedFix = 10;
+    /// <summary>
+    /// 冲刺速度修正乘数
+    /// </summary>
+    const float RushAccelerationFix = 280;
     /// <summary>
     /// 奔跑加速度修正乘数
     /// </summary>
-    const float RunAccelerationFix = 280;
+    const float RunAccelerationFix = 200;
     /// <summary>
     /// 正常加速度修正乘数
     /// </summary>
-    const float AccelerationFix = 130;
+    const float IdleAccelerationFix = 150;
     /// <summary>
     /// 疲劳饥饿速度修正除数
     /// </summary>
@@ -40,6 +48,7 @@ public class AnimalMovement : MonoBehaviour
     public Transform circle;
     public float breath;
     Vector3 velocity;
+    Vector2 AccelerationDirection;
     bool rest = false;
     /// <summary>
     /// 散步目的地
@@ -67,7 +76,8 @@ public class AnimalMovement : MonoBehaviour
     public bool ReadyForLove => satiety >= satiety_findlove && !FindingLove && Time.time - tiredStartTime > tiredTime;
     public bool Hungry => satiety <= satiety_findfood;
     public bool Tired => Time.time - tiredStartTime <= tiredTime;
-    public bool Hunting => AnimalType.foodHabit == FoodHabit.Carnivorous || AnimalType.foodHabit == FoodHabit.Omnivorous && Hungry;
+    public bool Hunting => !Tired && (AnimalType.foodHabit == FoodHabit.Carnivorous || AnimalType.foodHabit == FoodHabit.Omnivorous && Hungry);
+    public bool Idle => AnimalStateMachine.currentState.GetType() == typeof(AnimalState_Idle);
 
     /// <summary>
     /// 视野里的动物
@@ -133,6 +143,8 @@ public class AnimalMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (animalCollider.OverlapPoint(destination))
+            destination = Vector2.zero;
         if (rest) breath += Time.fixedDeltaTime * WorldManager.TimeScale;
         if (breath <= 0) rest = true;
         if (breath > AnimalType.breath)
@@ -152,26 +164,32 @@ public class AnimalMovement : MonoBehaviour
         WorldManager.AnimalDisappear(gameObject);
     }
 
-    public void ApproachPosition(Vector2 position, bool run)
+    public void ApproachPosition(Vector2 position, bool rush)
     {
         if (WorldManager.TimeScale == 0)
         {
             AnimalRigidBody.velocity = Vector3.zero;
             return;
         }
+        if (!rush && breath < AnimalType.breath) rest = true;
+        if (rush && !rest)
+            breath -= Time.fixedDeltaTime * WorldManager.TimeScale;
+        if (rest)
+            rush = false;
 
         float x = position.x - transform.position.x;
         float y = position.y - transform.position.y;
-        if (!run && breath < AnimalType.breath) rest = true;
-        if (run && !rest)
-            breath -= Time.fixedDeltaTime * WorldManager.TimeScale;
-        if (rest)
-            run = false;
-        AnimalRigidBody.AddForce(WorldManager.TimeScale * (run ? AccelerationFix : RunAccelerationFix) * AnimalType.acceleration * MinimumTimeAcceleration.AccelerationDirection(AnimalRigidBody.velocity, WorldManager.TimeScale * AnimalType.acceleration * (run ? AccelerationFix : RunAccelerationFix) / AnimalType.weight, x, y));
+        float f = (Idle ? IdleAccelerationFix : (rush ? RushAccelerationFix : RunAccelerationFix)) * AnimalType.acceleration;
+        float v = (Idle ? IdleSpeedFix : (rush ? RushSpeedFix : RunSpeedFix)) * AnimalType.speed;
+        if (AccelerationDirection.magnitude == 0 || position != destination || new Vector2(x, y).magnitude % 1 < 0.01f)
+            AccelerationDirection = MinimumTimeAcceleration.AccelerationDirection(AnimalRigidBody.velocity, WorldManager.TimeScale * f / AnimalType.weight, x, y);
+        if (position != destination)
+            destination = position;
         if (AnimalRigidBody.velocity.magnitude == 0)
             AnimalRigidBody.velocity = velocity * WorldManager.TimeScale;
-        if (AnimalRigidBody.velocity.magnitude > AnimalType.speed * (run ? IdleSpeedFix : RunSpeedFix) * WorldManager.TimeScale)
-            AnimalRigidBody.velocity = WorldManager.TimeScale * AnimalType.speed * (run ? IdleSpeedFix : RunSpeedFix) * AnimalRigidBody.velocity.normalized;
+        AnimalRigidBody.AddForce(WorldManager.TimeScale * f * AccelerationDirection);
+        if (AnimalRigidBody.velocity.magnitude > v * WorldManager.TimeScale)
+            AnimalRigidBody.velocity = WorldManager.TimeScale * v * AnimalRigidBody.velocity.normalized;
         velocity = AnimalRigidBody.velocity / WorldManager.TimeScale;
     }
 
@@ -181,4 +199,5 @@ public class AnimalMovement : MonoBehaviour
         if (isActiveAndEnabled) Debug.Log("!!!");
         WorldManager.AnimalDestoryed();
     }
+
 }

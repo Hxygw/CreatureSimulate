@@ -1,4 +1,4 @@
 default_animal 0 default_heart default_eye default_leg default_horn default_lung
-dog 1 dog_heart dog_eye dog_leg dog_lung
+dog 1 dog_heart dog_eye dog_leg dog_lung dog_claw
 bear 2 bear_heart bear_eye bear_leg bear_lung bear_claw
 strepsiptera 0 default_heart default_eye dog_leg dog_lung strepsiptera

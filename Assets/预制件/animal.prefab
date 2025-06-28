@@ -326,7 +326,6 @@ MonoBehaviour:
   animalCollider: {fileID: 3194277115556578862}
   tiredSpeedCoast: 0.6
   target: {fileID: 0}
-  circleG: {fileID: 1517751121414541216}
   animalsInHorizon: []
   animalsInTouch: []
   foodsInHorizon: []
@@ -366,7 +365,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.28
+  m_Radius: 0.5
 --- !u!50 &2173521069495422815
 Rigidbody2D:
   serializedVersion: 4

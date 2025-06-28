@@ -11,47 +11,15 @@ public class AnimalState_Idle : AnimalState
     public override void LogicUpdate(int id)
     {
         base.LogicUpdate(id);
-        if (AnimalMovement.Hunting && !AnimalMovement.Tired)
-            foreach (var a in AnimalMovement.animalsInTouch)
-                if (a != null && a.AnimalType != null && a.Hungry && a.AnimalType.attack == AnimalMovement.AnimalType.attack && Random.value < AnimalMovement.satiety / (AnimalMovement.satiety + a.satiety))
-                {
-                    AnimalMovement.satiety += a.satiety;
-                    a.Dead();
-                }
-        foreach (var animal in AnimalMovement.animalsInHorizon)
-            if (animal.AnimalType != null && animal.Hunting && animal.AnimalType.attack > AnimalMovement.AnimalType.attack)
-            {
-                StateMachine.SwitchState(typeof(AnimalState_Escape));
-                return;
-            }
-            else if ((AnimalMovement.AnimalType.foodHabit == FoodHabit.Carnivorous || AnimalMovement.AnimalType.foodHabit == FoodHabit.Omnivorous) && !AnimalMovement.Tired && animal.AnimalType != null && animal.AnimalType.attack < AnimalMovement.AnimalType.attack)
-                if((animal.transform.position - AnimalMovement.transform.position).sqrMagnitude < (AnimalMovement.target?.position ?? new Vector3(10000, 10000, 10000) - AnimalMovement.transform.position).sqrMagnitude)
-                    AnimalMovement.target = animal.transform;
-        if (AnimalMovement.target != null)
-        {
-            StateMachine.SwitchState(typeof(AnimalState_FindFood));
+        if (CheckEscape())
             return;
-        }
-        if (AnimalMovement.ReadyForLove && !WorldManager.Full)
-        {
-            foreach (var a in AnimalMovement.animalsInHorizon)
-                if (a.ReadyForLove && a.AnimalType.foodHabit == AnimalMovement.AnimalType.foodHabit)
-                {
-                    AnimalMovement.target = a.transform;
-                    a.target = AnimalMovement.transform;
-                    StateMachine.SwitchState(typeof(AnimalState_FindLove));
-                    a.AnimalStateMachine.SwitchState(typeof(AnimalState_FindLove));
-                }
-        }
-        else if ((AnimalMovement.AnimalType.foodHabit == FoodHabit.herbivore || AnimalMovement.AnimalType.foodHabit == FoodHabit.Omnivorous) && AnimalMovement.foodsInHorizon.Count != 0)
-        {
-            foreach (var a in AnimalMovement.foodsInHorizon)
-                if ((a.transform.position - AnimalMovement.transform.position).sqrMagnitude < (AnimalMovement.target?.position ?? new Vector3(10000, 10000, 10000) - AnimalMovement.transform.position).sqrMagnitude)
-                    AnimalMovement.target = a.transform;
-            StateMachine.SwitchState(typeof(AnimalState_FindFood));
+        if (CheckHunt())
             return;
-        }
-        if (AnimalMovement.animalCollider.OverlapPoint(AnimalMovement.destination))
+        if (AnimalMovement.ReadyForLove && !WorldManager.Full && CheckFindlove())
+            return;
+        if (CheckFindfood())
+            return;
+        if (AnimalMovement.destination == Vector2.zero)
             SetDestination();
     }
 
@@ -69,10 +37,54 @@ public class AnimalState_Idle : AnimalState
     protected void SetDestination()
     {
         float a = Random.value * Mathf.PI * 2;
-        AnimalMovement.destination = new Vector2(AnimalMovement.transform.position.x + Mathf.Cos(a) * AnimalMovement.AnimalType.range, AnimalMovement.transform.position.y + Mathf.Sin(a) * AnimalMovement.AnimalType.range);
-        if (AnimalMovement.destination.x > WorldManager.WorldRange) AnimalMovement.destination.x = WorldManager.WorldRange;
-        if (AnimalMovement.destination.x < -WorldManager.WorldRange) AnimalMovement.destination.x = -WorldManager.WorldRange;
-        if (AnimalMovement.destination.y > WorldManager.WorldRange) AnimalMovement.destination.y = WorldManager.WorldRange;
-        if (AnimalMovement.destination.y < -WorldManager.WorldRange) AnimalMovement.destination.y = -WorldManager.WorldRange;
+        Vector2 destination = new(AnimalMovement.transform.position.x + Mathf.Cos(a) * AnimalMovement.AnimalType.range, AnimalMovement.transform.position.y + Mathf.Sin(a) * AnimalMovement.AnimalType.range);
+        if (destination.x > WorldManager.WorldRange) destination.x = WorldManager.WorldRange;
+        if (destination.x < -WorldManager.WorldRange) destination.x = -WorldManager.WorldRange;
+        if (destination.y > WorldManager.WorldRange) destination.y = WorldManager.WorldRange;
+        if (destination.y < -WorldManager.WorldRange) destination.y = -WorldManager.WorldRange;
+        AnimalMovement.destination = destination;
+    }
+
+    protected bool CheckHunt()
+    {
+        if(!AnimalMovement.Hunting)
+            return false;
+        foreach (var animal in AnimalMovement.animalsInHorizon)
+            if (CanInteract(animal) && animal.AnimalType.attack < AnimalMovement.AnimalType.attack)
+                if ((animal.transform.position - AnimalMovement.transform.position).magnitude < (AnimalMovement.target?.position ?? new Vector3(10000, 10000, 10000) - AnimalMovement.transform.position).magnitude)
+                    AnimalMovement.target = animal.transform;
+        if (AnimalMovement.target != null)
+        {
+            StateMachine.SwitchState(typeof(AnimalState_FindFood));
+            return true;
+        }
+        return false;
+    }
+
+    protected bool CheckFindlove()
+    {
+        if (!AnimalMovement.ReadyForLove)
+            return false;
+        foreach (var a in AnimalMovement.animalsInHorizon)
+            if (CanInteract(a) && a.ReadyForLove && a.AnimalType.foodHabit == AnimalMovement.AnimalType.foodHabit)
+            {
+                AnimalMovement.target = a.transform;
+                a.target = AnimalMovement.transform;
+                StateMachine.SwitchState(typeof(AnimalState_FindLove));
+                a.AnimalStateMachine.SwitchState(typeof(AnimalState_FindLove));
+                return true;
+            }
+        return false;
+    }
+
+    protected bool CheckFindfood()
+    {
+        if (AnimalMovement.AnimalType.foodHabit == FoodHabit.Carnivorous || AnimalMovement.foodsInHorizon.Count == 0)
+            return false;
+        foreach (var f in AnimalMovement.foodsInHorizon)
+            if (CanInteract(f) && (f.transform.position - AnimalMovement.transform.position).sqrMagnitude < (AnimalMovement.target?.position ?? new Vector3(10000, 10000, 10000) - AnimalMovement.transform.position).sqrMagnitude)
+                AnimalMovement.target = f.transform;
+        StateMachine.SwitchState(typeof(AnimalState_FindFood));
+        return false;
     }
 }

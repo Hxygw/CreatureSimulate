@@ -10,19 +10,17 @@ public class AnimalState_Escape : AnimalState
     {
         base.LogicUpdate(id);
         bool b = false;
+        Vector2 destination = Vector2.zero;
         foreach (var a in AnimalMovement.animalsInHorizon)
-            if (a != null && a.AnimalType != null && a.AnimalType.attack > AnimalMovement.AnimalType.attack && a.Hungry)
+            if (CanInteract(a) && a.Hunting && a.AnimalType.attack > AnimalMovement.AnimalType.attack)
             {
-                if (!b)
-                {
-                    AnimalMovement.destination = Vector2.zero;
-                    b = true;
-                }
-                float x = a.transform.position.x - AnimalMovement.transform.position.x, y = a.transform.position.y - AnimalMovement.transform.position.y;
-                AnimalMovement.destination += new Vector2(x, y).normalized;
+                b = true;
+                float x = a.transform.position.x - AnimalMovement.transform.position.x;
+                float y = a.transform.position.y - AnimalMovement.transform.position.y;
+                destination += new Vector2(x, y).normalized;
             }
-        if (b) AnimalMovement.destination = new Vector2(AnimalMovement.transform.position.x, AnimalMovement.transform.position.y) - 1.2f * AnimalMovement.AnimalType.range * AnimalMovement.destination.normalized;
-        else if (AnimalMovement.animalCollider.OverlapPoint(AnimalMovement.destination))
+        if (b) AnimalMovement.destination = new Vector2(AnimalMovement.transform.position.x, AnimalMovement.transform.position.y) - 1.2f * AnimalMovement.AnimalType.range * destination.normalized;
+        else if (AnimalMovement.destination == Vector2.zero)
             StateMachine.SwitchState(typeof(AnimalState_Idle));
     }
     public override void PhysicUpdate(int id)
@@ -34,6 +32,5 @@ public class AnimalState_Escape : AnimalState
     public override void Exit(int id)
     {
         base.Exit(id);
-        AnimalMovement.destination = Vector2.zero;
     }
 }

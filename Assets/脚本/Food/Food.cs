@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Food : MonoBehaviour
 {
-    public float energy=0.1f;
+    public float energy = 0.2f;
     public float Eat()
     {
         WorldManager.FoodDisappear(gameObject);
@@ -11,8 +11,9 @@ public class Food : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Animal"))
-            collision.gameObject.GetComponent<AnimalMovement>().satiety += Eat();
+        if (collision.gameObject.TryGetComponent(out AnimalMovement a))
+            if (a.AnimalType.foodHabit != FoodHabit.Carnivorous)
+                a.satiety += Eat();
     }
 
     private void OnDestroy()

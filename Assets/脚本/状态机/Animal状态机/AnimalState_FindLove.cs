@@ -9,27 +9,14 @@ public class AnimalState_FindLove : AnimalState
     public override void LogicUpdate(int id)
     {
         base.LogicUpdate(id);
-        foreach (var animal in AnimalMovement.animalsInHorizon)
-            if (animal.AnimalType != null && animal.Hunting && animal.AnimalType.attack > AnimalMovement.AnimalType.attack)
-            {
-                StateMachine.SwitchState(typeof(AnimalState_Escape));
-                return;
-            }
-        if (AnimalMovement.target == null || !AnimalMovement.target.gameObject.activeSelf)
+        if (CheckEscape())
+            return;
+        if (AnimalMovement.target == null || !AnimalMovement.target.gameObject.activeSelf || WorldManager.Full || AnimalMovement.Hungry || !AnimalMovement.target.GetComponent<AnimalMovement>().FindingLove)
         {
             StateMachine.SwitchState(typeof(AnimalState_Idle));
             return;
         }
-        if (WorldManager.Full)
-            StateMachine.SwitchState(typeof(AnimalState_Idle));
-        else if (AnimalMovement.Hungry)
-        {
-            AnimalMovement.target.GetComponent<AnimalStateMachine>().SwitchState(typeof(AnimalState_Idle));
-            StateMachine.SwitchState(typeof(AnimalState_Idle));
-        }
-        else if (AnimalMovement.target == null || !AnimalMovement.target.GetComponent<AnimalMovement>().FindingLove)
-            StateMachine.SwitchState(typeof(AnimalState_Idle));
-        else if (AnimalMovement.animalsInTouch.Contains(AnimalMovement.target.GetComponent<AnimalMovement>()) && AnimalMovement.target.GetComponent<AnimalMovement>().FindingLove)
+        if (AnimalMovement.animalsInTouch.Contains(AnimalMovement.target.GetComponent<AnimalMovement>()))
             Reproduce(AnimalMovement, AnimalMovement.target.GetComponent<AnimalMovement>());
     }
     public override void PhysicUpdate(int id)

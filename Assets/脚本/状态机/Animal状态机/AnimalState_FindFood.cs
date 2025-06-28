@@ -9,29 +9,25 @@ public class AnimalState_FindFood : AnimalState
     public override void LogicUpdate(int id)
     {
         base.LogicUpdate(id);
-        foreach (var animal in AnimalMovement.animalsInHorizon)
-            if (animal.AnimalType != null && animal.Hunting && animal.AnimalType.attack > AnimalMovement.AnimalType.attack)
-            {
-                StateMachine.SwitchState(typeof(AnimalState_Escape));
-                return;
-            }
+        if (CheckEscape())
+            return;
         if (AnimalMovement.target == null || !AnimalMovement.target.gameObject.activeSelf || (AnimalMovement.target.gameObject.CompareTag("Animal") && !AnimalMovement.animalsInHorizon.Contains(AnimalMovement.target.GetComponent<AnimalMovement>())))
             StateMachine.SwitchState(typeof(AnimalState_Idle));
-        if (AnimalMovement.Hunting && AnimalMovement.animalsInTouch.Count != 0)
+        if (AnimalMovement.Hunting)
             foreach (var a in AnimalMovement.animalsInTouch)
-                if (a.AnimalType != null && a.AnimalType.attack < AnimalMovement.AnimalType.attack)
+                if (CanInteract(a) && a.AnimalType.attack < AnimalMovement.AnimalType.attack)
                 {
-                    StateMachine.SwitchState(typeof(AnimalState_Idle));
                     AnimalMovement.tiredStartTime = Time.time;
                     AnimalMovement.satiety += a.satiety;
                     a.Dead();
-                    break;
+                    StateMachine.SwitchState(typeof(AnimalState_Idle));
+                    return;
                 }
     }
     public override void PhysicUpdate(int id)
     {
         base.PhysicUpdate(id);
-        if (AnimalMovement.target != null) AnimalMovement.ApproachPosition(AnimalMovement.target.transform.position, AnimalMovement.Hungry);
+        if (AnimalMovement.target != null) AnimalMovement.ApproachPosition(AnimalMovement.target.transform.position, AnimalMovement.target.CompareTag("Animal"));
     }
 
     public override void Exit(int id)
