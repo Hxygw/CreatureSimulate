@@ -10,7 +10,7 @@ public class AnimalState_FindLove : AnimalState
     {
         base.LogicUpdate(id);
         foreach (var animal in AnimalMovement.animalsInHorizon)
-            if (animal.AnimalType != null && animal.Hungry && animal.AnimalType.attack > AnimalMovement.AnimalType.attack)
+            if (animal.AnimalType != null && animal.Hunting && animal.AnimalType.attack > AnimalMovement.AnimalType.attack)
             {
                 StateMachine.SwitchState(typeof(AnimalState_Escape));
                 return;

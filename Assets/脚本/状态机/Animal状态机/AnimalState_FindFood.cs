@@ -10,14 +10,14 @@ public class AnimalState_FindFood : AnimalState
     {
         base.LogicUpdate(id);
         foreach (var animal in AnimalMovement.animalsInHorizon)
-            if (animal.AnimalType != null && animal.Hungry && animal.AnimalType.attack > AnimalMovement.AnimalType.attack)
+            if (animal.AnimalType != null && animal.Hunting && animal.AnimalType.attack > AnimalMovement.AnimalType.attack)
             {
                 StateMachine.SwitchState(typeof(AnimalState_Escape));
                 return;
             }
         if (AnimalMovement.target == null || !AnimalMovement.target.gameObject.activeSelf || (AnimalMovement.target.gameObject.CompareTag("Animal") && !AnimalMovement.animalsInHorizon.Contains(AnimalMovement.target.GetComponent<AnimalMovement>())))
             StateMachine.SwitchState(typeof(AnimalState_Idle));
-        if (AnimalMovement.Hungry && AnimalMovement.animalsInTouch.Count != 0)
+        if (AnimalMovement.Hunting && AnimalMovement.animalsInTouch.Count != 0)
             foreach (var a in AnimalMovement.animalsInTouch)
                 if (a.AnimalType != null && a.AnimalType.attack < AnimalMovement.AnimalType.attack)
                 {

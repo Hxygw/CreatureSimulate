@@ -5,11 +5,11 @@ public class AnimalMovement : MonoBehaviour
     /// <summary>
     /// 奔跑速度修正乘数
     /// </summary>
-    const float RunSpeedFix = 350;
+    const float RunSpeedFix = 200;
     /// <summary>
     /// 正常速度修正乘数
     /// </summary>
-    const float IdleSpeedFix = 200;
+    const float IdleSpeedFix = 50;
     /// <summary>
     /// 奔跑加速度修正乘数
     /// </summary>
@@ -67,6 +67,7 @@ public class AnimalMovement : MonoBehaviour
     public bool ReadyForLove => satiety >= satiety_findlove && !FindingLove && Time.time - tiredStartTime > tiredTime;
     public bool Hungry => satiety <= satiety_findfood;
     public bool Tired => Time.time - tiredStartTime <= tiredTime;
+    public bool Hunting => AnimalType.foodHabit == FoodHabit.Carnivorous || AnimalType.foodHabit == FoodHabit.Omnivorous && Hungry;
 
     /// <summary>
     /// 视野里的动物
@@ -116,7 +117,7 @@ public class AnimalMovement : MonoBehaviour
             if (colliders[i] != null && colliders[i].gameObject != gameObject && !colliders[i].isTrigger)
                 if (colliders[i].TryGetComponent(out AnimalMovement a))
                     animalsInHorizon.Add(a);
-                else if (colliders[i].TryGetComponent(out Food f))
+                else if ((AnimalType.foodHabit == FoodHabit.Omnivorous || AnimalType.foodHabit == FoodHabit.herbivore) && colliders[i].TryGetComponent(out Food f))
                     foodsInHorizon.Add(f);
             colliders[i] = null;
         }

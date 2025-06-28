@@ -34,13 +34,15 @@ public class AnimalType
     public readonly float speed, attack, range, power, breath, hungrySpeed, acceleration, size, loveSatietyCoast = 0.3f;
     public readonly int blood, weight;
     public bool strepsiptera = false;
+    public FoodHabit foodHabit;
     /// <summary>
     /// 身体部件id列表，用于生物种类的查重
     /// </summary>
     protected readonly List<int> bodyPartIdList = new();
 
-    public AnimalType(List<BodyPart> bodyParts, int id)
+    public AnimalType(FoodHabit foodHabit, List<BodyPart> bodyParts, int id)
     {
+        this.foodHabit = foodHabit;
         blood = 0;
         range = 0;
         weight = 0;
@@ -152,7 +154,7 @@ public class AnimalType
         for (int i = 0; i < words.Length; i++)
         {
             List<BodyPart> parts = new();
-            for(int j = 1; j < words[i].Length;j++)
+            for(int j = 2; j < words[i].Length;j++)
                 if (BodyPartTable.ContainsKey(words[i][j]))
                     parts.Add(BodyPartTable[words[i][j]]);
                 else
@@ -160,9 +162,14 @@ public class AnimalType
                     Debug.Log("AnimalTypes.txt第" + (i + 1).ToString() + "行存在错误数据");
                     continue;
                 }
-            if (CheckOut(parts))
+            if (CheckOut(parts) && int.TryParse(words[i][1],out int k))
             {
-                AnimalType type = new(parts, AnimalTypes.Count);
+                if (k < 0 || k >= 3)
+                {
+                    Debug.Log("AnimalTypes.txt第" + (i + 1).ToString() + "行存在错误数据");
+                    continue;
+                }
+                AnimalType type = new((FoodHabit)k, parts, AnimalTypes.Count);
                 foreach(var t in AnimalTypes)
                     if(ListEquals(t.bodyPartIdList,type.bodyPartIdList))
                     {
@@ -190,7 +197,7 @@ public class AnimalType
                 else bodyParts.Remove(bodyPart);
                 if (CheckOut(bodyParts))
                 {
-                    var Type = new AnimalType(bodyParts, AnimalTypes.Count);
+                    var Type = new AnimalType(animalType1.foodHabit, bodyParts, AnimalTypes.Count);
                     foreach (var type in AnimalTypes)
                         if (ListEquals(Type.bodyPartIdList, type.bodyPartIdList))
                             return type;
@@ -216,7 +223,7 @@ public class AnimalType
                     bodyParts2.Add(part);
             if (CheckOut(bodyParts2))
             {
-                var Type = new AnimalType(bodyParts2, AnimalTypes.Count);
+                var Type = new AnimalType(animalType1.foodHabit, bodyParts2, AnimalTypes.Count);
                 foreach (var type in AnimalTypes)
                     if (ListEquals(Type.bodyPartIdList, type.bodyPartIdList))
                         return type;
@@ -266,4 +273,21 @@ public class BodyPart
     }
 
     
+}
+
+
+public enum FoodHabit
+{
+    /// <summary>
+    /// 草食
+    /// </summary>
+    herbivore,
+    /// <summary>
+    /// 肉食
+    /// </summary>
+    Carnivorous,
+    /// <summary>
+    /// 杂食
+    /// </summary>
+    Omnivorous
 }

@@ -11,19 +11,20 @@ public class AnimalState_Idle : AnimalState
     public override void LogicUpdate(int id)
     {
         base.LogicUpdate(id);
-        if (AnimalMovement.Hungry && !AnimalMovement.Tired) foreach (var a in AnimalMovement.animalsInTouch)
+        if (AnimalMovement.Hunting && !AnimalMovement.Tired)
+            foreach (var a in AnimalMovement.animalsInTouch)
                 if (a != null && a.AnimalType != null && a.Hungry && a.AnimalType.attack == AnimalMovement.AnimalType.attack && Random.value < AnimalMovement.satiety / (AnimalMovement.satiety + a.satiety))
                 {
                     AnimalMovement.satiety += a.satiety;
                     a.Dead();
                 }
         foreach (var animal in AnimalMovement.animalsInHorizon)
-            if (animal.Hungry && animal.AnimalType != null && animal.AnimalType.attack > AnimalMovement.AnimalType.attack)
+            if (animal.AnimalType != null && animal.Hunting && animal.AnimalType.attack > AnimalMovement.AnimalType.attack)
             {
                 StateMachine.SwitchState(typeof(AnimalState_Escape));
                 return;
             }
-            else if (AnimalMovement.Hungry && !AnimalMovement.Tired && animal.AnimalType != null && animal.AnimalType.attack < AnimalMovement.AnimalType.attack)
+            else if ((AnimalMovement.AnimalType.foodHabit == FoodHabit.Carnivorous || AnimalMovement.AnimalType.foodHabit == FoodHabit.Omnivorous) && !AnimalMovement.Tired && animal.AnimalType != null && animal.AnimalType.attack < AnimalMovement.AnimalType.attack)
                 if((animal.transform.position - AnimalMovement.transform.position).sqrMagnitude < (AnimalMovement.target?.position ?? new Vector3(10000, 10000, 10000) - AnimalMovement.transform.position).sqrMagnitude)
                     AnimalMovement.target = animal.transform;
         if (AnimalMovement.target != null)
@@ -34,7 +35,7 @@ public class AnimalState_Idle : AnimalState
         if (AnimalMovement.ReadyForLove && !WorldManager.Full)
         {
             foreach (var a in AnimalMovement.animalsInHorizon)
-                if (a.ReadyForLove)
+                if (a.ReadyForLove && a.AnimalType.foodHabit == AnimalMovement.AnimalType.foodHabit)
                 {
                     AnimalMovement.target = a.transform;
                     a.target = AnimalMovement.transform;
@@ -42,7 +43,7 @@ public class AnimalState_Idle : AnimalState
                     a.AnimalStateMachine.SwitchState(typeof(AnimalState_FindLove));
                 }
         }
-        else if (AnimalMovement.foodsInHorizon.Count != 0)
+        else if ((AnimalMovement.AnimalType.foodHabit == FoodHabit.herbivore || AnimalMovement.AnimalType.foodHabit == FoodHabit.Omnivorous) && AnimalMovement.foodsInHorizon.Count != 0)
         {
             foreach (var a in AnimalMovement.foodsInHorizon)
                 if ((a.transform.position - AnimalMovement.transform.position).sqrMagnitude < (AnimalMovement.target?.position ?? new Vector3(10000, 10000, 10000) - AnimalMovement.transform.position).sqrMagnitude)
