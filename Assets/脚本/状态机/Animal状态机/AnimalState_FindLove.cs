@@ -44,7 +44,7 @@ public class AnimalState_FindLove : AnimalState
         {
             while (satiety > 0)
             {
-                var a = AnimalType.CreatNewAnimal(animal1.AnimalType, animal2.AnimalType);
+                var a = Animal.CreatNewAnimal(animal1.Animal, animal2.Animal);
                 if (a != null)
                 {
                     WorldManager.AnimalAppear(a, (animal1.transform.position + animal2.transform.position) / 2f, AnimalType.StrepsipteraLoveCoast);
@@ -57,7 +57,7 @@ public class AnimalState_FindLove : AnimalState
             else animal2.AnimalStateMachine.SwitchState(typeof(AnimalState_Idle));
             return;
         }
-        WorldManager.AnimalAppear(AnimalType.CreatNewAnimal(animal1.AnimalType, animal2.AnimalType), (animal1.transform.position + animal2.transform.position) / 2f);
+        WorldManager.AnimalAppear(Animal.CreatNewAnimal(animal1.Animal, animal2.Animal), (animal1.transform.position + animal2.transform.position) / 2f);
         animal1.AnimalStateMachine.SwitchState(typeof(AnimalState_Idle));
         animal2.AnimalStateMachine.SwitchState(typeof(AnimalState_Idle));
     }

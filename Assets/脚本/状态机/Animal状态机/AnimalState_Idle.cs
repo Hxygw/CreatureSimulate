@@ -13,9 +13,9 @@ public class AnimalState_Idle : AnimalState
         base.LogicUpdate(id);
         if (CheckEscape())
             return;
-        if (CheckHunt())
+        if (CheckFindlove())
             return;
-        if (AnimalMovement.ReadyForLove && !WorldManager.Full && CheckFindlove())
+        if (CheckHunt())
             return;
         if (CheckFindfood())
             return;
@@ -63,10 +63,10 @@ public class AnimalState_Idle : AnimalState
 
     protected bool CheckFindlove()
     {
-        if (!AnimalMovement.ReadyForLove)
+        if (!AnimalMovement.ReadyForLove || WorldManager.Full)
             return false;
         foreach (var a in AnimalMovement.animalsInHorizon)
-            if (CanInteract(a) && a.ReadyForLove && a.AnimalType.foodHabit == AnimalMovement.AnimalType.foodHabit)
+            if (CanInteract(a) && a.sex != AnimalMovement.sex && a.ReadyForLove && a.AnimalType == AnimalMovement.AnimalType)
             {
                 AnimalMovement.target = a.transform;
                 a.target = AnimalMovement.transform;
@@ -79,7 +79,7 @@ public class AnimalState_Idle : AnimalState
 
     protected bool CheckFindfood()
     {
-        if (AnimalMovement.AnimalType.foodHabit == FoodHabit.Carnivorous || AnimalMovement.foodsInHorizon.Count == 0)
+        if (AnimalMovement.AnimalType.foodHabit == FoodHabit.Carnivorous && !AnimalMovement.Hungry || AnimalMovement.foodsInHorizon.Count == 0)
             return false;
         foreach (var f in AnimalMovement.foodsInHorizon)
             if (CanInteract(f) && (f.transform.position - AnimalMovement.transform.position).sqrMagnitude < (AnimalMovement.target?.position ?? new Vector3(10000, 10000, 10000) - AnimalMovement.transform.position).sqrMagnitude)

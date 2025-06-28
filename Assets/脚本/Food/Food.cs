@@ -12,8 +12,8 @@ public class Food : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.TryGetComponent(out AnimalMovement a))
-            if (a.AnimalType.foodHabit != FoodHabit.Carnivorous)
-                a.satiety += Eat();
+            if (a.AnimalType.foodHabit != FoodHabit.Carnivorous || a.Hungry)
+                a.satiety += (a.AnimalType.foodHabit == FoodHabit.Carnivorous ? 0.5f : 1) * Eat();
     }
 
     private void OnDestroy()

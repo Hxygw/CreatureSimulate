@@ -19,7 +19,7 @@ public class AnimalState_Escape : AnimalState
                 float y = a.transform.position.y - AnimalMovement.transform.position.y;
                 destination += new Vector2(x, y).normalized;
             }
-        if (b) AnimalMovement.destination = new Vector2(AnimalMovement.transform.position.x, AnimalMovement.transform.position.y) - 1.2f * AnimalMovement.AnimalType.range * destination.normalized;
+        if (b) AnimalMovement.destination = new Vector2(AnimalMovement.transform.position.x, AnimalMovement.transform.position.y) - 2f * AnimalMovement.AnimalType.range * destination.normalized;
         else if (AnimalMovement.destination == Vector2.zero)
             StateMachine.SwitchState(typeof(AnimalState_Idle));
     }

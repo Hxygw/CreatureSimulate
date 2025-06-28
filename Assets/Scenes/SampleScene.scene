@@ -163,7 +163,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.4867924, g: 0.4867924, b: 0.4867924, a: 0.35686275}
+  m_BackGroundColor: {r: 0.12452829, g: 0.12452829, b: 0.12452829, a: 0.35686275}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -296,6 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CameraSpeed: 60
+  camera: {fileID: 519420031}
 --- !u!213 &524842610
 Sprite:
   m_ObjectHideFlags: 0
@@ -539,13 +540,13 @@ MonoBehaviour:
   procudctFood: 1
   FoodObject: {fileID: 7212394176978871842, guid: 4e02f7bc94311b246bf44690d81ff747, type: 3}
   AnimalObject: {fileID: 7023396405526053003, guid: 2d78d6a1c0cc3b048897474897b7e757, type: 3}
-  worldRange: 20
+  worldRange: 50
   foodNum: 10
-  animalNum: 50
-  foodApprenceGap: 0.3
+  animalNum: 70
+  foodApprenceGap: 0.2
   foodApprenceProbability: 1
   foodInitial: 6
-  animalInitial: 10
+  animalInitial: 20
 --- !u!4 &1034210613
 Transform:
   m_ObjectHideFlags: 0

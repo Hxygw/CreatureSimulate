@@ -1,0 +1,3 @@
+名称name 染色体chromosome 等位基因种类geneId 性状种类trait 优先级priority (属性attribute 数值num)*n
+defaultgene1 a 0 default 0 power -1
+defaultgene2 a 0 default 1 power 1

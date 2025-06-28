@@ -38,6 +38,8 @@ public class WorldManager : MonoBehaviour
     static int worldManagerNum = 0;
     private void Awake()
     {
+        BodyPart.Setup();
+        Gene.Setup();
         AnimalType.Setup();
 
 
@@ -107,26 +109,26 @@ public class WorldManager : MonoBehaviour
         food.transform.position = Vector3.zero;
         foodPool_On.Remove(food);
     }
-    public static void AnimalAppear(AnimalType animalType, float x, float y, float satiety = 0.6f)
+    public static void AnimalAppear(Animal animal, float x, float y, float satiety = 0.6f)
     {
-        if (animalType == null) return;
+        if (animal == null) return;
         while (animalPool_Off.Count != 0 && animalPool_Off.Peek() == null) animalPool_Off.Dequeue();
         if (animalPool_Off.Count == 0) animalPool_Off.Enqueue(Instantiate(instance.AnimalObject, instance.transform));
         animalPool_Off.Peek().transform.position = new Vector3(x, y);
-        animalPool_Off.Peek().GetComponent<AnimalMovement>().AnimalType = animalType;
+        animalPool_Off.Peek().GetComponent<AnimalMovement>().Animal = animal;
         animalPool_Off.Peek().GetComponent<AnimalMovement>().satiety = satiety;
         animalPool_On.Add(animalPool_Off.Peek());
         animalPool_Off.Dequeue().SetActive(true);
     }
-    public static void AnimalAppear(AnimalType animalType, Vector2 vector2, float satiety = 0.6f)
+    public static void AnimalAppear(Animal animal, Vector2 vector2, float satiety = 0.6f)
     {
-        AnimalAppear(animalType, vector2.x, vector2.y, satiety);
+        AnimalAppear(animal, vector2.x, vector2.y, satiety);
     }
     public static void AnimalAppear(AnimalType animalType)
     {
         if (animalType == null) return;
         float a = Random.value * Mathf.PI * 2;
-        AnimalAppear(animalType, Mathf.Cos(a) * WorldRange * Random.value, Mathf.Sin(a) * WorldRange * Random.value);
+        AnimalAppear(new(animalType, null, Random.value >= 0.5f), Mathf.Cos(a) * WorldRange * Random.value, Mathf.Sin(a) * WorldRange * Random.value);
     }
 
     public static void AnimalDisappear(GameObject animal)

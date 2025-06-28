@@ -40,7 +40,8 @@ public class AnimalMovement : MonoBehaviour
     const float SizeFix = 14;
     
     public int id;
-    public AnimalType AnimalType;
+    public Animal Animal;
+    public AnimalType AnimalType => Animal.animalType;
     public AnimalStateMachine AnimalStateMachine;
     public Rigidbody2D AnimalRigidBody;
     public SpriteRenderer spriteRenderer;
@@ -48,7 +49,8 @@ public class AnimalMovement : MonoBehaviour
     public Transform circle;
     public float breath;
     Vector3 velocity;
-    Vector2 AccelerationDirection;
+    Vector2 accelerationDirection;
+    Vector2 lastPosition;
     bool rest = false;
     /// <summary>
     /// 散步目的地
@@ -76,8 +78,9 @@ public class AnimalMovement : MonoBehaviour
     public bool ReadyForLove => satiety >= satiety_findlove && !FindingLove && Time.time - tiredStartTime > tiredTime;
     public bool Hungry => satiety <= satiety_findfood;
     public bool Tired => Time.time - tiredStartTime <= tiredTime;
-    public bool Hunting => !Tired && (AnimalType.foodHabit == FoodHabit.Carnivorous || AnimalType.foodHabit == FoodHabit.Omnivorous && Hungry);
+    public bool Hunting => !ReadyForLove && !Tired && (AnimalType.foodHabit == FoodHabit.Carnivorous || AnimalType.foodHabit == FoodHabit.Omnivorous && Hungry);
     public bool Idle => AnimalStateMachine.currentState.GetType() == typeof(AnimalState_Idle);
+    public bool sex => Animal.sex;
 
     /// <summary>
     /// 视野里的动物
@@ -95,7 +98,7 @@ public class AnimalMovement : MonoBehaviour
     public int AnimalTypeId;
     [SerializeReference] public List<string> bodyParts = new();
 
-    readonly Collider2D[] colliders = new Collider2D[10];
+    readonly Collider2D[] colliders = new Collider2D[20];
     ContactFilter2D filter = new();
 
     public void OnEnable()
@@ -105,14 +108,14 @@ public class AnimalMovement : MonoBehaviour
 
         foreach (var part in AnimalType.bodyParts)
             bodyParts.Add(part.name);
-        animalHorizon.radius = AnimalType.range;
         spriteRenderer.color = AnimalType.color;
         trailRenderer.startColor = AnimalType.color;
         trailRenderer.endColor = AnimalType.color;
-        breath = AnimalType.breath;
+        animalHorizon.radius = Animal.range;
+        breath = Animal.breath;
         tiredStartTime = Time.time;
-        circle.localScale = new Vector3(AnimalType.size / SizeFix, AnimalType.size / SizeFix, 1);
-        AnimalRigidBody.mass = AnimalType.weight;
+        circle.localScale = new Vector3(Animal.size / SizeFix, Animal.size / SizeFix, 1);
+        AnimalRigidBody.mass = Animal.weight;
         AnimalStateMachine.SwitchState(typeof(AnimalState_Idle));
     }
 
@@ -139,20 +142,24 @@ public class AnimalMovement : MonoBehaviour
                     animalsInTouch.Add(a);
             colliders[i] = null;
         }
+
+        if ((lastPosition.x - destination.x) * (transform.position.x - destination.x) < 0 && (lastPosition.y - destination.y) * (transform.position.y - destination.y) < 0)
+            destination = Vector2.zero;
+        lastPosition = transform.position;
     }
 
     private void FixedUpdate()
     {
-        if (animalCollider.OverlapPoint(destination))
+        if (destination != Vector2.zero && animalCollider.OverlapPoint(destination))
             destination = Vector2.zero;
         if (rest) breath += Time.fixedDeltaTime * WorldManager.TimeScale;
         if (breath <= 0) rest = true;
-        if (breath > AnimalType.breath)
+        if (breath > Animal.breath)
         {
-            breath = AnimalType.breath;
+            breath = Animal.breath;
             rest = false;
         }
-        satiety -= AnimalType.hungrySpeed / (breath < AnimalType.breath ? RunHungrySpeedFix : HungrySpeedFix) * WorldManager.TimeScale;
+        satiety -= Animal.hungrySpeed / (breath < Animal.breath ? RunHungrySpeedFix : HungrySpeedFix) * WorldManager.TimeScale;
         if (satiety < 0)
             Dead();
     }
@@ -160,7 +167,7 @@ public class AnimalMovement : MonoBehaviour
     public void Dead()
     {
         AnimalStateMachine.SwitchState(typeof(AnimalState_Dead));
-        AnimalType = null;
+        Animal = null;
         WorldManager.AnimalDisappear(gameObject);
     }
 
@@ -171,7 +178,7 @@ public class AnimalMovement : MonoBehaviour
             AnimalRigidBody.velocity = Vector3.zero;
             return;
         }
-        if (!rush && breath < AnimalType.breath) rest = true;
+        if (!rush && breath < Animal.breath) rest = true;
         if (rush && !rest)
             breath -= Time.fixedDeltaTime * WorldManager.TimeScale;
         if (rest)
@@ -179,15 +186,15 @@ public class AnimalMovement : MonoBehaviour
 
         float x = position.x - transform.position.x;
         float y = position.y - transform.position.y;
-        float f = (Idle ? IdleAccelerationFix : (rush ? RushAccelerationFix : RunAccelerationFix)) * AnimalType.acceleration;
-        float v = (Idle ? IdleSpeedFix : (rush ? RushSpeedFix : RunSpeedFix)) * AnimalType.speed;
-        if (AccelerationDirection.magnitude == 0 || position != destination || new Vector2(x, y).magnitude % 1 < 0.01f)
-            AccelerationDirection = MinimumTimeAcceleration.AccelerationDirection(AnimalRigidBody.velocity, WorldManager.TimeScale * f / AnimalType.weight, x, y);
+        float f = (Idle ? IdleAccelerationFix : (rush ? RushAccelerationFix : RunAccelerationFix)) * Animal.acceleration;
+        float v = (Idle ? IdleSpeedFix : (rush ? RushSpeedFix : RunSpeedFix)) * Animal.speed;
+        if (accelerationDirection.magnitude == 0 || position != destination || new Vector2(x, y).magnitude % 1 < 0.01f)
+            accelerationDirection = MinimumTimeAcceleration.AccelerationDirection(AnimalRigidBody.velocity, WorldManager.TimeScale * f / Animal.weight, x, y);
         if (position != destination)
             destination = position;
         if (AnimalRigidBody.velocity.magnitude == 0)
             AnimalRigidBody.velocity = velocity * WorldManager.TimeScale;
-        AnimalRigidBody.AddForce(WorldManager.TimeScale * f * AccelerationDirection);
+        AnimalRigidBody.AddForce(WorldManager.TimeScale * f * accelerationDirection);
         if (AnimalRigidBody.velocity.magnitude > v * WorldManager.TimeScale)
             AnimalRigidBody.velocity = WorldManager.TimeScale * v * AnimalRigidBody.velocity.normalized;
         velocity = AnimalRigidBody.velocity / WorldManager.TimeScale;

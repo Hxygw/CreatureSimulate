@@ -1,7 +1,7 @@
 Heart default_heart 0 3 20
-Heart dog_heart 0 2 18
+Heart dog_heart 0 2 20
 Heart bear_heart 0 5 30
-Eye default_eye 2 1 4
+Eye default_eye 2 1 5
 Eye dog_eye 3 1 6
 Eye bear_eye 3 2 10
 Leg default_leg 10 10 10

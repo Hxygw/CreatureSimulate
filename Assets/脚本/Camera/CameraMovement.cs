@@ -4,7 +4,9 @@ public class CameraMovement : MonoBehaviour
 {
     [Range(0f, 100f)]
     public float CameraSpeed = 20;
+    float ScrollWheel => Input.GetAxis("Mouse ScrollWheel");
     static InputActions input;
+    public new Camera camera;
     static Vector2 CameraMove => input.Camera.Move.ReadValue<Vector2>();
     // Start is called before the first frame update
 
@@ -24,6 +26,8 @@ public class CameraMovement : MonoBehaviour
             Move();
         if (input.Camera.Pause.triggered)
             Pause();
+        if (ScrollWheel != 0)
+            camera.orthographicSize *= (1 - ScrollWheel);
     }
 
     void Pause()
@@ -40,6 +44,6 @@ public class CameraMovement : MonoBehaviour
 
     void Move()
     {
-        transform.position += new Vector3(CameraSpeed * CameraMove.x * Time.deltaTime, CameraSpeed * CameraMove.y * Time.deltaTime);
+        transform.position += CameraSpeed * Time.deltaTime * Mathf.Pow(camera.orthographicSize / 25, 0.5f) * new Vector3(CameraMove.x, CameraMove.y);
     }
 }
